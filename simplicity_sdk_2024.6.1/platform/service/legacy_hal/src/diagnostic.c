@@ -38,7 +38,7 @@
 #include "sl_hal_emu.h"
 #endif // SL_CATALOG_HAL_EMU_PRESENT
 
-#if defined(SL_CATALOG_IOSTREAM_UART_COMMON_PRESENT)
+#if defined(SL_CATALOG_IOSTREAM_PRESENT)
 #include "sl_iostream.h"
 #endif
 
@@ -68,7 +68,7 @@ extern void sli_802154phy_radio_sleep(void);
 //------------------------------------------------------------------------------
 // Local Variables
 
-#if defined(SL_CATALOG_IOSTREAM_UART_COMMON_PRESENT)
+#if defined(SL_CATALOG_IOSTREAM_PRESENT)
 
 static const char * const cfsrBits[] =
 {
@@ -119,7 +119,7 @@ static const char nameStrings[] = "R0\0R1\0R2\0R3\0"
                                   "Ret0\0Ret1\0Ret2\0Ret3\0"
                                   "Ret4\0Ret5\0Dat0\0Dat1\0";
 
-#endif // SL_CATALOG_IOSTREAM_UART_COMMON_PRESENT
+#endif // SL_CATALOG_IOSTREAM_PRESENT
 
 static uint16_t savedResetCause;
 static HalAssertInfoType savedAssertInfo;
@@ -127,7 +127,7 @@ static HalAssertInfoType savedAssertInfo;
 //------------------------------------------------------------------------------
 // Functions
 
-#if defined(SL_CATALOG_IOSTREAM_UART_COMMON_PRESENT)
+#if defined(SL_CATALOG_IOSTREAM_PRESENT)
 
 void halPrintCrashData(uint8_t port)
 {
@@ -309,7 +309,7 @@ void halPrintCrashSummary(uint8_t port)
   sl_iostream_printf(SL_IOSTREAM_STDOUT, "\n");
 }
 
-#endif // SL_CATALOG_IOSTREAM_UART_COMMON_PRESENT
+#endif // SL_CATALOG_IOSTREAM_PRESENT
 
 void halStartPCDiagnostics(void)
 {
@@ -583,9 +583,9 @@ void halInternalAssertFailed(const char * filename, int linenumber)
   sli_802154phy_radio_sleep();
 #endif
 
-#if defined(SL_CATALOG_IOSTREAM_UART_COMMON_PRESENT)
+#if defined(SL_CATALOG_IOSTREAM_PRESENT)
   sl_iostream_printf(SL_IOSTREAM_STDOUT, "\r\n[ASSERT:%s:%d]\r\n", filename, linenumber);
-#endif // SL_CATALOG_IOSTREAM_UART_COMMON_PRESENT
+#endif // SL_CATALOG_IOSTREAM_PRESENT
 
   halResetWatchdog();              // In case we're close to running out.
   INTERRUPTS_OFF();

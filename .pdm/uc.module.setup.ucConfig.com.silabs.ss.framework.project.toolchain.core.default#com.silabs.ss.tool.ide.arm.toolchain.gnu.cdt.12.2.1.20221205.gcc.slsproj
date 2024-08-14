@@ -59,6 +59,12 @@
     <file name="emlib_core_debug_config.h" generated="true" linked="false"/>
     <file name="sl_mbedtls_config.h" generated="true" linked="false"/>
     <file name="sl_mbedtls_device_config.h" generated="true" linked="false"/>
+    <file name="zcl_config_gp_combo.zap" generated="true" linked="false"/>
+    <file name="green-power-adapter-config.h" generated="true" linked="false"/>
+    <file name="sl_iostream_vuart_config.h" generated="true" linked="false"/>
+    <file name="green-power-client-config.h" generated="true" linked="false"/>
+    <file name="green-power-server-config.h" generated="true" linked="false"/>
+    <file name="af-support-config.h" generated="true" linked="false"/>
   </folder>
   <includePath uri="studio:/project/config"/>
 </project>

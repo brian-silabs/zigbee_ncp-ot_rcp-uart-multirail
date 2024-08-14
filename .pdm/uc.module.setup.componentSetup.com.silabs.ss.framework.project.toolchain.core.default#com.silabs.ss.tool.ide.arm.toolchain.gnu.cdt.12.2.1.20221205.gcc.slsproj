@@ -210,12 +210,15 @@
             <file name="sl_iostream.c" linked="false" uri="studio:/sdk/platform/service/iostream/src/sl_iostream.c"/>
             <file name="sl_iostream_debug.c" linked="false" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_debug.c"/>
             <file name="sl_iostream_swo_itm_8.c" linked="false" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_swo_itm_8.c"/>
+            <file name="sl_iostream_vuart.c" linked="false" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_vuart.c"/>
           </folder>
           <folder name="inc">
             <file name="sl_iostream.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream.h"/>
             <file name="sl_iostream_debug.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_debug.h"/>
             <file name="sli_iostream_swo_itm_8.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sli_iostream_swo_itm_8.h"/>
             <file name="sl_iostream_swo_itm_8.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_swo_itm_8.h"/>
+            <file name="sl_iostream_vuart.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_vuart.h"/>
+            <file name="sl_iostream_swo.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_swo.h"/>
           </folder>
         </folder>
         <folder name="legacy_hal">
@@ -1972,6 +1975,184 @@
             <file name="multi-mac.h" linked="false" uri="studio:/sdk/protocol/zigbee/stack/mac/multi-mac.h"/>
           </folder>
         </folder>
+        <folder name="app">
+          <folder name="framework">
+            <folder name="plugin">
+              <folder name="af-support">
+                <file name="af-support.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/af-support/af-support.c"/>
+                <file name="af-support.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/af-support/af-support.h"/>
+              </folder>
+              <folder name="groups-server">
+                <file name="groups-server-common.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/groups-server/groups-server-common.c"/>
+                <file name="groups-server-common.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/groups-server/groups-server-common.h"/>
+              </folder>
+              <folder name="debug-print">
+                <file name="sl_zigbee_debug_print.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/debug-print/sl_zigbee_debug_print.c"/>
+                <file name="sl_zigbee_debug_print.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/debug-print/sl_zigbee_debug_print.h"/>
+              </folder>
+              <folder name="green-power-adapter">
+                <file name="green-power-af-wrapper.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-adapter/green-power-af-wrapper.c"/>
+                <file name="green-power-stack-wrapper.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-adapter/green-power-stack-wrapper.c"/>
+                <file name="green-power-print-wrapper.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-adapter/green-power-print-wrapper.c"/>
+                <file name="green-power-token-wrapper.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-adapter/green-power-token-wrapper.c"/>
+                <file name="green-power-event-wrapper.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-adapter/green-power-event-wrapper.c"/>
+                <file name="green-power-adapter.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-adapter/green-power-adapter.h"/>
+                <file name="green-power-af-wrapper.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-adapter/green-power-af-wrapper.h"/>
+                <file name="green-power-stack-wrapper.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-adapter/green-power-stack-wrapper.h"/>
+                <file name="green-power-print-wrapper.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-adapter/green-power-print-wrapper.h"/>
+                <file name="green-power-token-wrapper.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-adapter/green-power-token-wrapper.h"/>
+                <file name="green-power-event-wrapper.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-adapter/green-power-event-wrapper.h"/>
+              </folder>
+              <folder name="green-power-client">
+                <file name="green-power-client.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-client/green-power-client.c"/>
+                <file name="green-power-client.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-client/green-power-client.h"/>
+              </folder>
+              <folder name="green-power-common">
+                <file name="green-power-common.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-common/green-power-common.c"/>
+                <file name="green-power-common.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-common/green-power-common.h"/>
+              </folder>
+              <folder name="green-power-server">
+                <file name="green-power-server.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-server/green-power-server.c"/>
+                <file name="green-power-server-gpd-cmd-maps.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-server/green-power-server-gpd-cmd-maps.c"/>
+                <file name="green-power-security.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-server/green-power-security.c"/>
+                <file name="green-power-server-cb.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-server/green-power-server-cb.c"/>
+                <file name="green-power-security-test-vectors.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-server/green-power-security-test-vectors.c"/>
+                <file name="green-power-server.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-server/green-power-server.h"/>
+                <file name="green-power-server-tokens.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-server/green-power-server-tokens.h"/>
+              </folder>
+              <folder name="green-power-translation-table">
+                <file name="green-power-translation-table.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-translation-table/green-power-translation-table.h"/>
+              </folder>
+              <folder name="multirail-demo">
+                <file name="multirail-demo.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/multirail-demo/multirail-demo.c"/>
+                <file name="multirail-demo-cb.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/multirail-demo/multirail-demo-cb.c"/>
+                <file name="multirail-demo.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/multirail-demo/multirail-demo.h"/>
+              </folder>
+            </folder>
+            <folder name="util">
+              <file name="af-soc-common.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/af-soc-common.c"/>
+              <file name="attribute-storage.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/attribute-storage.c"/>
+              <file name="attribute-table.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/attribute-table.c"/>
+              <file name="attribute-size.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/attribute-size.c"/>
+              <file name="message.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/message.c"/>
+              <file name="process-cluster-message.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/process-cluster-message.c"/>
+              <file name="process-global-message.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/process-global-message.c"/>
+              <file name="global-callback.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/global-callback.c"/>
+              <file name="af-common.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/af-common.c"/>
+              <file name="client-api.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/client-api.c"/>
+              <file name="multi-network.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/multi-network.c"/>
+              <file name="time-util.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/time-util.c"/>
+              <file name="util.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/util.c"/>
+              <file name="zcl-util.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/zcl-util.c"/>
+              <file name="af-event.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/af-event.c"/>
+              <file name="af-event.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/af-event.h"/>
+              <file name="af-main.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/af-main.h"/>
+              <file name="af-token.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/af-token.h"/>
+              <file name="attribute-storage.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/attribute-storage.h"/>
+              <file name="attribute-table.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/attribute-table.h"/>
+              <file name="client-api.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/client-api.h"/>
+              <file name="common.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/common.h"/>
+              <file name="config.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/config.h"/>
+              <file name="global-callback.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/global-callback.h"/>
+              <file name="global-other-callback.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/global-other-callback.h"/>
+              <file name="print.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/print.h"/>
+              <file name="service-discovery.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/service-discovery.h"/>
+              <file name="time-util.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/time-util.h"/>
+              <file name="util.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/util.h"/>
+              <file name="zcl-debug-print.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/zcl-debug-print.h"/>
+              <file name="af-ncp-token.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/af-ncp-token.h"/>
+            </folder>
+            <folder name="service-function">
+              <file name="sl_service_function.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/service-function/sl_service_function.c"/>
+              <file name="sl_service_function.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/service-function/sl_service_function.h"/>
+            </folder>
+            <folder name="common">
+              <file name="zigbee_enhanced_routing.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_enhanced_routing.c"/>
+              <file name="zigbee_ncp_framework_cb.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_ncp_framework_cb.c"/>
+              <file name="sl_zigbee_system_common.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/sl_zigbee_system_common.c"/>
+              <file name="zigbee_app_framework_stack_cb.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_app_framework_stack_cb.c"/>
+              <file name="zigbee_stack_sleep.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_stack_sleep.c"/>
+              <file name="zigbee_stack_rtos_adaptation.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_stack_rtos_adaptation.c"/>
+              <file name="sl_zigbee_system_common.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/sl_zigbee_system_common.h"/>
+              <file name="zigbee_app_framework_event.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_app_framework_event.h"/>
+              <file name="zigbee_app_framework_callback.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_app_framework_callback.h"/>
+              <file name="zigbee_rtos_adaptation.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_rtos_adaptation.h"/>
+              <file name="os_cfg_app.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/os_cfg_app.h"/>
+              <file name="zigbee_app_framework_sleep.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_app_framework_sleep.c"/>
+              <file name="zigbee_app_framework_rtos_adaptation.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_app_framework_rtos_adaptation.c"/>
+            </folder>
+            <folder name="security">
+              <file name="crypto-state.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/security/crypto-state.c"/>
+              <file name="af-security.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/security/af-security.h"/>
+              <file name="crypto-state.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/security/crypto-state.h"/>
+              <file name="security-config.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/security/security-config.h"/>
+            </folder>
+            <folder name="include">
+              <file name="af.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/include/af.h"/>
+              <file name="af-types.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/include/af-types.h"/>
+              <file name="af-storage.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/include/af-storage.h"/>
+              <file name="plugin-component-mappings.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/include/plugin-component-mappings.h"/>
+            </folder>
+            <folder name="signature-decode">
+              <file name="sl_signature_decode.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/signature-decode/sl_signature_decode.h"/>
+              <file name="sl_signature_decode.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/signature-decode/sl_signature_decode.c"/>
+            </folder>
+          </folder>
+          <folder name="em260">
+            <file name="command-handlers-af-support.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-af-support.c"/>
+            <file name="command-handlers-green-power-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-green-power-generated.c"/>
+            <file name="em260-common.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/em260-common.c"/>
+            <file name="ncp-stack-stub.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/ncp-stack-stub.c"/>
+            <file name="command-context.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-context.h"/>
+            <file name="serial-interface.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/serial-interface.h"/>
+            <file name="em260-callbacks.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/em260-callbacks.h"/>
+            <file name="command-handlers-cbke.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-cbke.h"/>
+            <file name="command-handlers-mfglib.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-mfglib.h"/>
+            <file name="command-handlers-binding-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-binding-generated.c"/>
+            <file name="command-handlers-messaging-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-messaging-generated.c"/>
+            <file name="command-handlers-networking-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-networking-generated.c"/>
+            <file name="command-handlers-security-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-security-generated.c"/>
+            <file name="command-handlers-trust-center-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-trust-center-generated.c"/>
+            <file name="command-handlers-zll.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-zll.h"/>
+            <file name="command-handlers-binding.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-binding.h"/>
+            <file name="command-handlers-security.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-security.h"/>
+            <file name="command-handlers-zigbee-pro.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-zigbee-pro.h"/>
+            <file name="command-handlers-zll-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-zll-generated.c"/>
+          </folder>
+          <folder name="util">
+            <folder name="zigbee-framework">
+              <file name="zigbee-device-common.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/zigbee-framework/zigbee-device-common.h"/>
+            </folder>
+            <folder name="serial">
+              <file name="sl_zigbee_command_interpreter.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/serial/sl_zigbee_command_interpreter.h"/>
+            </folder>
+            <folder name="ezsp">
+              <file name="ezsp-protocol.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/ezsp/ezsp-protocol.h"/>
+              <file name="ezsp-enum.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/ezsp/ezsp-enum.h"/>
+              <file name="ezsp-frame-utilities.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/ezsp/ezsp-frame-utilities.h"/>
+            </folder>
+            <folder name="security">
+              <file name="security.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/security/security.h"/>
+            </folder>
+            <folder name="counters">
+              <file name="counters.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/counters/counters.c"/>
+              <file name="counters.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/counters/counters.h"/>
+            </folder>
+          </folder>
+          <folder name="xncp">
+            <file name="xncp.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp.h"/>
+            <file name="xncp_cb.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp_cb.c"/>
+            <file name="xncp-token.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp-token.h"/>
+            <file name="xncp-sample-custom-ezsp-protocol.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp-sample-custom-ezsp-protocol.h"/>
+          </folder>
+          <folder name="ncp">
+            <folder name="plugin">
+              <folder name="xncp">
+                <file name="xncp.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/ncp/plugin/xncp/xncp.h"/>
+              </folder>
+            </folder>
+          </folder>
+        </folder>
         <folder name="build">
           <folder name="gcc">
             <folder name="cortex-m33">
@@ -2034,83 +2215,6 @@
                 <folder name="release_singlenetwork">
                   <file name="libzigbee-zll.a" linked="false" uri="studio:/sdk/protocol/zigbee/build/gcc/cortex-m33/zigbee-zll/release_singlenetwork/libzigbee-zll.a"/>
                 </folder>
-              </folder>
-            </folder>
-          </folder>
-        </folder>
-        <folder name="app">
-          <folder name="framework">
-            <folder name="plugin">
-              <folder name="debug-print">
-                <file name="sl_zigbee_debug_print.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/debug-print/sl_zigbee_debug_print.c"/>
-                <file name="sl_zigbee_debug_print.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/debug-print/sl_zigbee_debug_print.h"/>
-              </folder>
-              <folder name="multirail-demo">
-                <file name="multirail-demo.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/multirail-demo/multirail-demo.c"/>
-                <file name="multirail-demo-cb.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/multirail-demo/multirail-demo-cb.c"/>
-                <file name="multirail-demo.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/multirail-demo/multirail-demo.h"/>
-              </folder>
-            </folder>
-            <folder name="common">
-              <file name="zigbee_enhanced_routing.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_enhanced_routing.c"/>
-              <file name="zigbee_ncp_framework_cb.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_ncp_framework_cb.c"/>
-              <file name="sl_zigbee_system_common.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/sl_zigbee_system_common.c"/>
-              <file name="zigbee_stack_sleep.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_stack_sleep.c"/>
-              <file name="zigbee_stack_rtos_adaptation.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_stack_rtos_adaptation.c"/>
-              <file name="sl_zigbee_system_common.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/sl_zigbee_system_common.h"/>
-              <file name="zigbee_app_framework_event.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_app_framework_event.h"/>
-              <file name="zigbee_app_framework_callback.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_app_framework_callback.h"/>
-              <file name="zigbee_rtos_adaptation.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/zigbee_rtos_adaptation.h"/>
-              <file name="os_cfg_app.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/common/os_cfg_app.h"/>
-            </folder>
-            <folder name="util">
-              <file name="af-ncp-token.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/util/af-ncp-token.h"/>
-            </folder>
-          </folder>
-          <folder name="em260">
-            <file name="command-handlers-green-power-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-green-power-generated.c"/>
-            <file name="em260-common.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/em260-common.c"/>
-            <file name="ncp-stack-stub.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/ncp-stack-stub.c"/>
-            <file name="command-context.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-context.h"/>
-            <file name="serial-interface.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/serial-interface.h"/>
-            <file name="em260-callbacks.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/em260-callbacks.h"/>
-            <file name="command-handlers-cbke.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-cbke.h"/>
-            <file name="command-handlers-mfglib.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-mfglib.h"/>
-            <file name="command-handlers-binding-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-binding-generated.c"/>
-            <file name="command-handlers-messaging-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-messaging-generated.c"/>
-            <file name="command-handlers-networking-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-networking-generated.c"/>
-            <file name="command-handlers-security-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-security-generated.c"/>
-            <file name="command-handlers-trust-center-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-trust-center-generated.c"/>
-            <file name="command-handlers-zll.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-zll.h"/>
-            <file name="command-handlers-binding.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-binding.h"/>
-            <file name="command-handlers-security.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-security.h"/>
-            <file name="command-handlers-zigbee-pro.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-zigbee-pro.h"/>
-            <file name="command-handlers-zll-generated.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/em260/command-handlers-zll-generated.c"/>
-          </folder>
-          <folder name="xncp">
-            <file name="xncp.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp.h"/>
-            <file name="xncp_cb.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp_cb.c"/>
-            <file name="xncp-token.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp-token.h"/>
-            <file name="xncp-sample-custom-ezsp-protocol.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp-sample-custom-ezsp-protocol.h"/>
-          </folder>
-          <folder name="util">
-            <folder name="ezsp">
-              <file name="ezsp-protocol.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/ezsp/ezsp-protocol.h"/>
-              <file name="ezsp-enum.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/ezsp/ezsp-enum.h"/>
-              <file name="ezsp-frame-utilities.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/ezsp/ezsp-frame-utilities.h"/>
-            </folder>
-            <folder name="security">
-              <file name="security.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/security/security.h"/>
-            </folder>
-            <folder name="counters">
-              <file name="counters.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/counters/counters.c"/>
-              <file name="counters.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/util/counters/counters.h"/>
-            </folder>
-          </folder>
-          <folder name="ncp">
-            <folder name="plugin">
-              <folder name="xncp">
-                <file name="xncp.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/ncp/plugin/xncp/xncp.h"/>
               </folder>
             </folder>
           </folder>
@@ -2217,15 +2321,28 @@
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/token_manager/inc"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/udelay/inc"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/emdrv/ustimer/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/af-support"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/groups-server"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/service-function"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/framework"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/debug-print"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/gp"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/internal/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/green-power-adapter"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/include"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/util"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/security"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/signature-decode"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/util/zigbee-framework"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/util/serial"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/green-power-client"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/green-power-common"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/green-power-server"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/green-power-translation-table"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/multirail-demo"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/em260"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/xncp"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/util/ezsp"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/util"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/util/security"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/security"/>
   <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/zigbee"/>
@@ -2256,6 +2373,7 @@
   <macroDefinition name="SL_CODE_COMPONENT_PERIPHERAL_SYSRTC" value="hal_sysrtc"/>
   <macroDefinition name="CMSIS_NVIC_VIRTUAL"/>
   <macroDefinition name="CMSIS_NVIC_VIRTUAL_HEADER_FILE" value="&quot;cmsis_nvic_virtual.h&quot;"/>
+  <macroDefinition name="SEGGER_RTT_ALIGNMENT" value="1024"/>
   <macroDefinition name="CORTEXM3"/>
   <macroDefinition name="CORTEXM3_EFM32_MICRO"/>
   <macroDefinition name="CORTEXM3_EFR32"/>

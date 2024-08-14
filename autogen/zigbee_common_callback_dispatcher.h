@@ -23,10 +23,17 @@
 
 // Event Init
 void sli_zigbee_af_event_init(void);
+void sl_zigbee_af_green_power_client_init_cb(uint8_t init_level);
+void sl_zigbee_af_green_power_server_init_cb(uint8_t init_level);
 // Local data Init
 void sli_zigbee_af_local_data_init(void);
+void sl_zigbee_af_green_power_client_init_cb(uint8_t init_level);
 // Init done
 void sli_zigbee_af_init_done(void);
+void sli_zb_af_support_init_callback(uint8_t init_level);
+void sl_zigbee_af_init(uint8_t init_level);
+void sl_zigbee_af_green_power_client_init_cb(uint8_t init_level);
+void sl_zigbee_af_green_power_server_init_cb(uint8_t init_level);
 
 // Tick
 void sli_zigbee_af_tick(void);

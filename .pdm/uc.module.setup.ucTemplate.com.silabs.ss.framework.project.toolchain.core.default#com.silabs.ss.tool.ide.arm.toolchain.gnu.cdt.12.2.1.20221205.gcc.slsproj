@@ -21,9 +21,14 @@
     <file name="sl_rail_util_ieee802154_phy_select.c" builtin="true" generated="true"/>
     <file name="sl_rail_util_ieee802154_stack_event.c" builtin="true" generated="true"/>
     <file name="linkerfile.ld" builtin="true" generated="true"/>
+    <file name="zigbee_zcl_callback_dispatcher.h" builtin="true" generated="true"/>
+    <file name="zigbee_zcl_callback_dispatcher.c" builtin="true" generated="true"/>
+    <file name="zigbee_af_cluster_functions.h" builtin="true" generated="true"/>
+    <file name="zigbee_af_token_headers.h" builtin="true" generated="true"/>
+    <file name="sl_cluster_service_gen.c" builtin="true" generated="true"/>
+    <file name="sl_cluster_service_gen.h" builtin="true" generated="true"/>
     <file name="zigbee_ncp_callback_dispatcher.h" builtin="true" generated="true"/>
     <file name="zigbee_ncp_callback_dispatcher.c" builtin="true" generated="true"/>
-    <file name="zigbee_af_token_headers.h" builtin="true" generated="true"/>
     <file name="zigbee_stack_callback_dispatcher.h" builtin="true" generated="true"/>
     <file name="zigbee_stack_callback_dispatcher.c" builtin="true" generated="true"/>
     <file name="zigbee_common_callback_dispatcher.h" builtin="true" generated="true"/>

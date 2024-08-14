@@ -21,5 +21,7 @@
 // *** Generated file. Do not edit! ***
 //
 
+#include "app/framework/plugin/green-power-server/green-power-server-tokens.h"
+
 #include "app/xncp/xncp-token.h"
 

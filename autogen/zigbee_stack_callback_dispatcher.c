@@ -21,7 +21,7 @@ bool sli_zb_af_support_incoming_message(
 {
 (void) apsFrame;
 return (
-false
+sli_zb_af_support_incoming_message_callback(apsFrame)
 );
 }
 #endif // defined(SL_ZIGBEE_AF_NCP) && defined(SL_CATALOG_ZIGBEE_AF_SUPPORT_PRESENT)
@@ -218,6 +218,8 @@ void sli_zigbee_af_stack_status(
 (void)status;
 
 sli_zigbee_af_stack_status_callback(status);
+sli_zigbee_af_green_power_client_stack_status_callback(status);
+sl_zigbee_af_green_power_server_stack_status_cb(status);
 }
 
 
@@ -805,6 +807,7 @@ void sli_zigbee_af_d_gp_sent(
 (void)gpepHandle;
 
 sli_zigbee_af_d_gp_sent_callback(status, gpepHandle);
+sli_zigbee_af_green_power_client_d_gp_sent_callback(status, gpepHandle);
 }
 
 
@@ -924,6 +927,7 @@ void sli_zigbee_af_gpep_incoming_message(
 (void)gpdCommandPayload;
 
 sli_zigbee_af_gpep_incoming_message_callback(status, gpdLink, sequenceNumber, addr, gpdfSecurityLevel, gpdfSecurityKeyType, autoCommissioning, bidirectionalInfo, gpdSecurityFrameCounter, gpdCommandId, mic, proxyTableIndex, gpdCommandPayloadLength, gpdCommandPayload);
+sli_zigbee_af_green_power_client_gpep_incoming_message_callback(status, gpdLink, sequenceNumber, addr, gpdfSecurityLevel, gpdfSecurityKeyType, autoCommissioning, bidirectionalInfo, gpdSecurityFrameCounter, gpdCommandId, mic, proxyTableIndex, gpdCommandPayloadLength, gpdCommandPayload);
 }
 
 

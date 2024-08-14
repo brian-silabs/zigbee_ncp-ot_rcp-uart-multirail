@@ -21,6 +21,10 @@
 bool sli_zb_af_support_incoming_message(
       // The aps Frame
       sl_zigbee_aps_frame_t *apsFrame);
+bool sli_zb_af_support_incoming_message_callback(
+      // The aps Frame
+      sl_zigbee_aps_frame_t *apsFrame)
+;
 #endif // defined(SL_ZIGBEE_AF_NCP) && defined(SL_CATALOG_ZIGBEE_AF_SUPPORT_PRESENT)
 
 
@@ -174,6 +178,14 @@ void sli_zigbee_af_stack_status(
       sl_status_t status)
 ;
 void sli_zigbee_af_stack_status_callback(
+      // Stack status
+      sl_status_t status)
+;
+void sli_zigbee_af_green_power_client_stack_status_callback(
+      // Stack status
+      sl_status_t status)
+;
+void sl_zigbee_af_green_power_server_stack_status_cb(
       // Stack status
       sl_status_t status)
 ;
@@ -706,6 +718,12 @@ void sli_zigbee_af_d_gp_sent_callback(
       // The handle of the GPDF.
       uint8_t gpepHandle)
 ;
+void sli_zigbee_af_green_power_client_d_gp_sent_callback(
+      // An sl_status_t value indicating success or the reason for failure.
+      sl_status_t status,
+      // The handle of the GPDF.
+      uint8_t gpepHandle)
+;
 
 // Pan Id Conflict
 // Return: An sl_status_t value indicating success or the reason for failure.
@@ -780,6 +798,39 @@ void sli_zigbee_af_gpep_incoming_message(
       uint8_t *gpdCommandPayload)
 ;
 void sli_zigbee_af_gpep_incoming_message_callback(
+      // The status of the GPDF receive.
+      sl_zigbee_gp_status_t status,
+      // The gpdLink value of the received GPDF.
+      uint8_t gpdLink,
+      // The GPDF sequence number.
+      uint8_t sequenceNumber,
+      // The address of the source GPD.
+      sl_zigbee_gp_address_t *addr,
+      // The security level of the received GPDF.
+      sl_zigbee_gp_security_level_t gpdfSecurityLevel,
+      // The securityKeyType used to decrypt/authenticate the incoming GPDF.
+      sl_zigbee_gp_key_type_t gpdfSecurityKeyType,
+      // Whether the incoming GPDF had the auto-commissioning bit set.
+      bool autoCommissioning,
+      // Bidirectional information represented in bitfields, where bit0 holds
+      // the rxAfterTx of incoming gpdf and bit1 holds if tx queue is available
+      // for outgoing gpdf.
+      uint8_t bidirectionalInfo,
+      // The security frame counter of the incoming GDPF.
+      uint32_t gpdSecurityFrameCounter,
+      // The gpdCommandId of the incoming GPDF.
+      uint8_t gpdCommandId,
+      // The received MIC of the GPDF.
+      uint32_t mic,
+      // The proxy table index of the corresponding proxy table entry to the
+      // incoming GPDF.
+      uint8_t proxyTableIndex,
+      // The length of the GPD command payload.
+      uint8_t gpdCommandPayloadLength,
+      // The GPD command payload.
+      uint8_t *gpdCommandPayload)
+;
+void sli_zigbee_af_green_power_client_gpep_incoming_message_callback(
       // The status of the GPDF receive.
       sl_zigbee_gp_status_t status,
       // The gpdLink value of the received GPDF.

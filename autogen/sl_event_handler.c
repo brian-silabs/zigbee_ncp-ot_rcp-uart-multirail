@@ -27,6 +27,7 @@
 #include "sl_debug_swo.h"
 #include "gpiointerrupt.h"
 #include "sl_iostream_debug.h"
+#include "sl_iostream_vuart.h"
 #include "hal.h"
 #include "sl_mbedtls.h"
 #include "nvm3_default.h"
@@ -93,6 +94,8 @@ void sl_stack_init(void)
   sl_rail_util_rssi_init();
   sli_zigbee_stack_rtos_task_init_cb();
   sli_zigbee_stack_sleep_init();
+  sli_zigbee_app_framework_rtos_task_init_cb();
+  sli_zigbee_app_framework_sleep_init();
   sl_ot_sys_init();
 }
 
@@ -106,5 +109,6 @@ void sl_internal_app_init(void)
 void sl_iostream_init_instances(void)
 {
   sl_iostream_debug_init();
+  sl_iostream_vuart_init();
 }
 

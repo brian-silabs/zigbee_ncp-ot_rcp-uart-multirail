@@ -2,6 +2,7 @@
 #define SL_IOSTREAM_HANDLES_H
 #include "sl_iostream.h"
 #include "sl_iostream_debug.h"
+#include "sl_iostream_vuart.h"
 
 
 #ifdef __cplusplus
