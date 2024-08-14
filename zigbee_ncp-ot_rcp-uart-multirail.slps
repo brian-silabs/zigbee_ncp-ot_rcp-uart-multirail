@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<model:MDescriptors xmlns:model="http://www.silabs.com/ss/Studio.ecore">
+  <descriptors name="zigbee_ncp-ot_rcp-uart-multirail">
+    <properties key="projectCommon.sdkId" value="com.silabs.sdk.stack.sisdk:2024.6.1._-1208501476"/>
+    <properties key="universalConfig.relativeWorkspacePath" value="../zigbee_ncp-ot_rcp-uart-multirail.slcw"/>
+    <properties key="universalConfig.generationDirectory" value=""/>
+    <properties key="universalConfig.toolchainCompatibility" value="gcc"/>
+    <properties key="universalConfig.incrementalOverwriteConfigs" value="false"/>
+    <properties key="projectCommon.boardIds" value="brd4186c:0.0.0.A01 brd4001a:0.0.0.A01"/>
+    <properties key="projectCommon.kitId" value=""/>
+    <properties key="projectCommon.partId" value="mcu.arm.efr32.mg24.efr32mg24b210f1536im48"/>
+    <properties key="projectCommon.toolchainId" value="com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:12.2.1.20221205"/>
+    <properties key="universalConfig.projectTypeIds" value="com.silabs.ss.framework.ide.project.core.cdtMbsProjectType"/>
+    <properties key="projectCommon.importModeId" value="COPY"/>
+    <properties key="universalConfig.compSelProjInstanceId" value="1723625437464"/>
+  </descriptors>
+</model:MDescriptors>
