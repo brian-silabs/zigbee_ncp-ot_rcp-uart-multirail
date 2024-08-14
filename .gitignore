@@ -1,0 +1,6 @@
+IAR\ ARM\ -\ Default/
+GNU\ ARM\ v12.2.1\ -\ Default/
+*.o
+ewarm-iar/
+Default/
+settings/
