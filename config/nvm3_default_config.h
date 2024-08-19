@@ -11,7 +11,7 @@
 // <i> should be equal to or higher than the number of NVM3 objects in the
 // <i> default NVM3 instance.
 // <i> Default: 200
-#define NVM3_DEFAULT_CACHE_SIZE  200
+#define NVM3_DEFAULT_CACHE_SIZE  1000
 #endif
 
 #ifndef NVM3_DEFAULT_MAX_OBJECT_SIZE

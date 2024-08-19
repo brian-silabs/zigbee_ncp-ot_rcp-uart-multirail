@@ -55,7 +55,7 @@
 // <e SL_ZIGBEE_AF_PLUGIN_GREEN_POWER_ADAPTER_USE_CUSTOM_AF_INTERFACE> Use custom AF implementation for green-power plugins
 // <i> Default: TRUE
 // <i> This enables abbility to use custom AF interface  on green-power plugins.
-#define SL_ZIGBEE_AF_PLUGIN_GREEN_POWER_ADAPTER_USE_CUSTOM_AF_INTERFACE  1
+#define SL_ZIGBEE_AF_PLUGIN_GREEN_POWER_ADAPTER_USE_CUSTOM_AF_INTERFACE  0
 
 // <s SL_ZIGBEE_AF_PLUGIN_GREEN_POWER_ADAPTER_USE_CUSTOM_AF_HEADER> File containing custom data type used for green power plugins
 // <i> Default: "green-power-adapter-type.h"
@@ -66,7 +66,7 @@
 // <e SL_ZIGBEE_AF_PLUGIN_GREEN_POWER_ADAPTER_USE_CUSTOM_TOKEN_SYSTEM> Use custom token system implementation for green-power plugins
 // <i> Default: TRUE
 // <i> This enables abbility to use custom gp token system on green-power plugins.
-#define SL_ZIGBEE_AF_PLUGIN_GREEN_POWER_ADAPTER_USE_CUSTOM_TOKEN_SYSTEM  1
+#define SL_ZIGBEE_AF_PLUGIN_GREEN_POWER_ADAPTER_USE_CUSTOM_TOKEN_SYSTEM  0
 
 // <s SL_ZIGBEE_AF_PLUGIN_GREEN_POWER_ADAPTER_USE_CUSTOM_TOKEN_HEADER> File containing custom data type used for green power plugins
 // <i> Default: "green-power-adapter-type.h"
