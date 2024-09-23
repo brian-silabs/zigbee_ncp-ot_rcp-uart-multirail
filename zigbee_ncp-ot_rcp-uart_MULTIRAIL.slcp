@@ -1,0 +1,123 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: zigbee_ncp-ot_rcp-uart_MULTIRAIL
+label: zigbee_ncp-ot_rcp-uart_MULTIRAIL
+author: Silicon Laboratories, Inc.
+description: This concurrent multiprotocol (CMP) application runs the Zigbee NCP simultaneously
+  with the OpenThread RCP. Communication with Zigbee and OpenThread host applications
+  is enabled using the Co-Processor Communication Protocol, which acts as a protocol
+  multiplexer and serial transport layer. The host applications connect to the CPC
+  daemon, which in turn connects to the EFR via a UART link. The Zigbee NCP part of
+  this application can be built as configured, or can optionally be augmented with
+  customized extensions for initialization, main loop processing, event definition/handling,
+  and messaging with the host.
+category: Zigbee + OpenThread Application
+filter:
+- name: Capability
+  value: [Multiprotocol]
+- name: Device Type
+  value: [NCP, RCP]
+- name: Project Difficulty
+  value: [Advanced]
+- name: Wireless Technology
+  value: [Thread, Zigbee]
+package: Zigbee
+quality: production
+readme:
+- {path: readme-zigbee_ncp-ot_rcp-uart.html}
+- {path: readme-zigbee_ncp-ot_rcp-uart.html}
+source:
+- {path: main.c}
+- {path: app.c}
+sdk: {id: gecko_sdk, version: 4.4.3}
+toolchain_settings: []
+component:
+- {id: EFR32MG24B210F1536IM48}
+- {id: bootloader_interface}
+- {id: brd4002a}
+- {id: brd4186c}
+- instance: [vcom]
+  id: cpc_secondary_driver_uart_usart
+- {id: ot_ncp_cpc}
+- {id: ot_rtt_log}
+- {id: ot_stack_rcp}
+- {id: rail_lib_multiprotocol}
+- {id: rail_mux}
+- {id: rail_util_pti}
+- {id: token_manager}
+- {id: zigbee_af_support}
+- {id: zigbee_app_framework_common}
+- {id: zigbee_debug_basic}
+- {id: zigbee_debug_print}
+- {id: zigbee_gp}
+- {id: zigbee_green_power_client}
+- {id: zigbee_green_power_combo_zap_config}
+- {id: zigbee_green_power_server}
+- {id: zigbee_multirail_demo}
+- {id: zigbee_ncp_cpc}
+- {id: zigbee_pro_stack_rail_mux}
+- {id: zigbee_r22_support}
+- {id: zigbee_security_link_keys}
+- {id: zigbee_source_route}
+- {id: zigbee_zll}
+define:
+- {name: EMBER_CUSTOM_MAC_FILTER_TABLE_SIZE, value: '15'}
+configuration:
+- {name: SL_BOARD_ENABLE_VCOM, value: '1'}
+- {name: EMBER_BINDING_TABLE_SIZE, value: '32'}
+- {name: EMBER_MAX_END_DEVICE_CHILDREN, value: '32'}
+- condition: [device_family_efr32mg13]
+  name: EMBER_PACKET_BUFFER_COUNT
+  value: '75'
+- unless: [device_family_efr32mg13]
+  name: EMBER_PACKET_BUFFER_COUNT
+  value: '255'
+- {name: EMBER_AF_PLUGIN_ZIGBEE_PRO_STACK_CHILD_TABLE_SIZE, value: '32'}
+- {name: EMBER_KEY_TABLE_SIZE, value: '12'}
+- {name: SL_ZIGBEE_OS_STACK_TASK_PRIORITY, value: osPriorityNormal1}
+- condition: [device_series_1]
+  name: NVM3_DEFAULT_NVM_SIZE
+  value: '36864'
+- condition: [device_series_2]
+  name: NVM3_DEFAULT_NVM_SIZE
+  value: '32768'
+- {name: SL_PSA_ITS_SUPPORT_V1_DRIVER, value: '0'}
+- {name: SL_PSA_ITS_SUPPORT_V2_DRIVER, value: '0'}
+- {name: SL_PSA_ITS_SUPPORT_V3_DRIVER, value: '1'}
+- {name: OPENTHREAD_CONFIG_HEAP_EXTERNAL_ENABLE, value: '0'}
+- {name: OPENTHREAD_CONFIG_BORDER_AGENT_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_BORDER_ROUTER_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_COAP_API_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_COAP_OBSERVE_API_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_COAP_SECURE_API_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_COMMISSIONER_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_DHCP6_CLIENT_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_DHCP6_SERVER_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_DNSSD_SERVER_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_JOINER_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_REFERENCE_DEVICE_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_SRP_SERVER_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_TMF_NETDATA_SERVICE_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_LOG_OUTPUT, value: OPENTHREAD_CONFIG_LOG_OUTPUT_PLATFORM_DEFINED}
+- {name: OPENTHREAD_CONFIG_MULTIPAN_RCP_ENABLE, value: '1'}
+- {name: OPENTHREAD_CONFIG_PLATFORM_KEY_REFERENCES_ENABLE, value: '0'}
+- {name: SL_LEGACY_HAL_WDOG_PERIOD, value: wdogPeriod_256k}
+- condition: [device_family_efr32mg13, micriumos_kernel]
+  name: SL_STACK_SIZE
+  value: '1024'
+- condition: [device_family_efr32mg13, freertos]
+  name: SL_STACK_SIZE
+  value: '1536'
+- condition: [micriumos_kernel]
+  unless: [device_family_efr32mg13]
+  name: SL_STACK_SIZE
+  value: '3584'
+- condition: [freertos]
+  unless: [device_family_efr32mg13]
+  name: SL_STACK_SIZE
+  value: '4096'
+- {name: configTIMER_TASK_PRIORITY, value: '53'}
+- {name: configMAX_TASK_NAME_LEN, value: '30'}
+ui_hints:
+  highlight:
+  - {path: readme-zigbee_ncp-ot_rcp-uart.html}
+
