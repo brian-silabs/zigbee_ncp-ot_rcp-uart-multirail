@@ -41,7 +41,10 @@
 #include "zigbee_rtos_adaptation.h"
 #include "zigbee_sleep_config.h"
 #include "sl_code_classification.h"
+
+#if !defined(SL_ZIGBEE_AF_NCP)
 extern void sli_zigbee_process_stack_callbacks_event(sl_event_t *cb_event);
+#endif
 
 extern void sl_zigbee_af_acquire_lock(void);
 extern void sl_zigbee_af_release_lock(void);

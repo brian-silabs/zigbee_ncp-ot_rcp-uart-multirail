@@ -37,7 +37,7 @@
 
 // <q SL_CPC_SECURITY_ENABLED> Enable encryption using the security endpoint
 // <i> Default: 0
-#define SL_CPC_SECURITY_ENABLED    1
+#define SL_CPC_SECURITY_ENABLED    0
 
 // <o SL_CPC_SECURITY_BINDING_KEY_METHOD> Binding key method
 // <i>
