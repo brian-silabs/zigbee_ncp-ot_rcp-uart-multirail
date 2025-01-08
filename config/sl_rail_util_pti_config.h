@@ -61,7 +61,7 @@
 
 // PTI DOUT on PD04
 #ifndef SL_RAIL_UTIL_PTI_DOUT_PORT              
-#define SL_RAIL_UTIL_PTI_DOUT_PORT               gpioPortD
+#define SL_RAIL_UTIL_PTI_DOUT_PORT               SL_GPIO_PORT_D
 #endif
 #ifndef SL_RAIL_UTIL_PTI_DOUT_PIN               
 #define SL_RAIL_UTIL_PTI_DOUT_PIN                4
@@ -69,7 +69,7 @@
 
 // PTI DFRAME on PD05
 #ifndef SL_RAIL_UTIL_PTI_DFRAME_PORT            
-#define SL_RAIL_UTIL_PTI_DFRAME_PORT             gpioPortD
+#define SL_RAIL_UTIL_PTI_DFRAME_PORT             SL_GPIO_PORT_D
 #endif
 #ifndef SL_RAIL_UTIL_PTI_DFRAME_PIN             
 #define SL_RAIL_UTIL_PTI_DFRAME_PIN              5

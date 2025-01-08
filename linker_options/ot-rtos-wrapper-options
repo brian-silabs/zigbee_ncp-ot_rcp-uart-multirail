@@ -16,6 +16,7 @@
 -Xlinker --wrap=otBackboneRouterSetMulticastListenerCallback
 -Xlinker --wrap=otBackboneRouterSetNdProxyCallback
 -Xlinker --wrap=otBackboneRouterSetRegistrationJitter
+-Xlinker --wrap=otBleSecureGetInstallCodeVerifyStatus
 -Xlinker --wrap=otBleSecureIsCommandClassAuthorized
 -Xlinker --wrap=otBleSecureIsConnected
 -Xlinker --wrap=otBleSecureIsConnectionActive
@@ -29,6 +30,7 @@
 -Xlinker --wrap=otBleSecureSend
 -Xlinker --wrap=otBleSecureSendApplicationTlv
 -Xlinker --wrap=otBleSecureSendMessage
+-Xlinker --wrap=otBleSecureSetTcatVendorInfo
 -Xlinker --wrap=otBleSecureStart
 -Xlinker --wrap=otBleSecureTcatStart
 -Xlinker --wrap=otBleSecureDisconnect
@@ -38,12 +40,14 @@
 -Xlinker --wrap=otBleSecureSetSslAuthMode
 -Xlinker --wrap=otBleSecureStop
 -Xlinker --wrap=otBorderAgentIsEphemeralKeyActive
+-Xlinker --wrap=otBorderAgentGetCounters
 -Xlinker --wrap=otBorderAgentGetState
 -Xlinker --wrap=otBorderAgentGetId
 -Xlinker --wrap=otBorderAgentSetEphemeralKey
 -Xlinker --wrap=otBorderAgentSetId
 -Xlinker --wrap=otBorderAgentGetUdpPort
 -Xlinker --wrap=otBorderAgentClearEphemeralKey
+-Xlinker --wrap=otBorderAgentDisconnect
 -Xlinker --wrap=otBorderAgentSetEphemeralKeyCallback
 -Xlinker --wrap=otBorderRouterAddOnMeshPrefix
 -Xlinker --wrap=otBorderRouterAddRoute
@@ -60,6 +64,7 @@
 -Xlinker --wrap=otBorderRoutingGetFavoredOmrPrefix
 -Xlinker --wrap=otBorderRoutingGetFavoredOnLinkPrefix
 -Xlinker --wrap=otBorderRoutingGetNat64Prefix
+-Xlinker --wrap=otBorderRoutingGetNextPeerBrEntry
 -Xlinker --wrap=otBorderRoutingGetNextPrefixTableEntry
 -Xlinker --wrap=otBorderRoutingGetNextRouterEntry
 -Xlinker --wrap=otBorderRoutingGetOmrPrefix
@@ -71,11 +76,13 @@
 -Xlinker --wrap=otBorderRoutingSetExtraRouterAdvertOptions
 -Xlinker --wrap=otBorderRoutingGetRouteInfoOptionPreference
 -Xlinker --wrap=otBorderRoutingGetRoutePreference
+-Xlinker --wrap=otBorderRoutingCountPeerBrs
 -Xlinker --wrap=otBorderRoutingClearRouteInfoOptionPreference
 -Xlinker --wrap=otBorderRoutingClearRoutePreference
 -Xlinker --wrap=otBorderRoutingDhcp6PdSetEnabled
 -Xlinker --wrap=otBorderRoutingDhcp6PdSetRequestCallback
 -Xlinker --wrap=otBorderRoutingPrefixTableInitIterator
+-Xlinker --wrap=otBorderRoutingSetOnLinkPrefix
 -Xlinker --wrap=otBorderRoutingSetRouteInfoOptionPreference
 -Xlinker --wrap=otBorderRoutingSetRoutePreference
 -Xlinker --wrap=otChannelManagerGetAutoChannelSelectionEnabled
@@ -131,6 +138,7 @@
 -Xlinker --wrap=otCoapMessageAppendUintOption
 -Xlinker --wrap=otCoapMessageAppendUriPathOptions
 -Xlinker --wrap=otCoapMessageAppendUriQueryOption
+-Xlinker --wrap=otCoapMessageAppendUriQueryOptions
 -Xlinker --wrap=otCoapMessageInitResponse
 -Xlinker --wrap=otCoapMessageSetPayloadMarker
 -Xlinker --wrap=otCoapMessageSetToken
@@ -173,7 +181,7 @@
 -Xlinker --wrap=otCoapSecureRemoveResource
 -Xlinker --wrap=otCoapSecureSetCaCertificateChain
 -Xlinker --wrap=otCoapSecureSetCertificate
--Xlinker --wrap=otCoapSecureSetClientConnectedCallback
+-Xlinker --wrap=otCoapSecureSetClientConnectEventCallback
 -Xlinker --wrap=otCoapSecureSetDefaultHandler
 -Xlinker --wrap=otCoapSecureSetPsk
 -Xlinker --wrap=otCoapSecureSetSslAuthMode
@@ -225,6 +233,7 @@
 -Xlinker --wrap=otDiagIsEnabled
 -Xlinker --wrap=otDiagProcessCmd
 -Xlinker --wrap=otDiagProcessCmdLine
+-Xlinker --wrap=otDiagSetOutputCallback
 -Xlinker --wrap=otDnsIsNameCompressionEnabled
 -Xlinker --wrap=otDnsEncodeTxtData
 -Xlinker --wrap=otDnsGetNextTxtEntry
@@ -294,7 +303,6 @@
 -Xlinker --wrap=otIp6IsAddressEqual
 -Xlinker --wrap=otIp6IsAddressUnspecified
 -Xlinker --wrap=otIp6IsEnabled
--Xlinker --wrap=otIp6IsMulticastPromiscuousEnabled
 -Xlinker --wrap=otIp6IsReceiveFilterEnabled
 -Xlinker --wrap=otIp6IsSlaacEnabled
 -Xlinker --wrap=otIp6ProtoToString
@@ -324,7 +332,6 @@
 -Xlinker --wrap=otIp6RemoveAllUnsecurePorts
 -Xlinker --wrap=otIp6ResetBorderRoutingCounters
 -Xlinker --wrap=otIp6SetAddressCallback
--Xlinker --wrap=otIp6SetMulticastPromiscuousEnabled
 -Xlinker --wrap=otIp6SetReceiveCallback
 -Xlinker --wrap=otIp6SetReceiveFilterEnabled
 -Xlinker --wrap=otIp6SetSlaacEnabled
@@ -356,6 +363,7 @@
 -Xlinker --wrap=otLinkIsInTransmitState
 -Xlinker --wrap=otLinkIsPromiscuous
 -Xlinker --wrap=otLinkIsRadioFilterEnabled
+-Xlinker --wrap=otLinkIsWakeupListenEnabled
 -Xlinker --wrap=otLinkGetExtendedAddress
 -Xlinker --wrap=otLinkGetCounters
 -Xlinker --wrap=otLinkGetTxDirectRetrySuccessHistogram
@@ -380,13 +388,19 @@
 -Xlinker --wrap=otLinkSetPollPeriod
 -Xlinker --wrap=otLinkSetPromiscuous
 -Xlinker --wrap=otLinkSetRegion
+-Xlinker --wrap=otLinkSetRxOnWhenIdle
 -Xlinker --wrap=otLinkSetSupportedChannelMask
+-Xlinker --wrap=otLinkSetWakeUpListenEnabled
+-Xlinker --wrap=otLinkSetWakeupChannel
+-Xlinker --wrap=otLinkSetWakeupListenParameters
 -Xlinker --wrap=otLinkFilterGetAddressMode
 -Xlinker --wrap=otLinkGetPanId
+-Xlinker --wrap=otLinkGetAlternateShortAddress
 -Xlinker --wrap=otLinkGetShortAddress
 -Xlinker --wrap=otLinkGetCcaFailureRate
 -Xlinker --wrap=otLinkGetCslPeriod
 -Xlinker --wrap=otLinkGetCslTimeout
+-Xlinker --wrap=otLinkGetFrameCounter
 -Xlinker --wrap=otLinkGetPollPeriod
 -Xlinker --wrap=otLinkGetSupportedChannelMask
 -Xlinker --wrap=otLinkConvertRssToLinkQuality
@@ -394,6 +408,7 @@
 -Xlinker --wrap=otLinkGetCslChannel
 -Xlinker --wrap=otLinkGetMaxFrameRetriesDirect
 -Xlinker --wrap=otLinkGetMaxFrameRetriesIndirect
+-Xlinker --wrap=otLinkGetWakeupChannel
 -Xlinker --wrap=otLinkFilterClearAddresses
 -Xlinker --wrap=otLinkFilterClearAllRssIn
 -Xlinker --wrap=otLinkFilterClearDefaultRssIn
@@ -402,6 +417,7 @@
 -Xlinker --wrap=otLinkFilterSetAddressMode
 -Xlinker --wrap=otLinkFilterSetDefaultRssIn
 -Xlinker --wrap=otLinkGetFactoryAssignedIeeeEui64
+-Xlinker --wrap=otLinkGetWakeupListenParameters
 -Xlinker --wrap=otLinkResetCounters
 -Xlinker --wrap=otLinkResetTxRetrySuccessHistogram
 -Xlinker --wrap=otLinkSetMaxFrameRetriesDirect
@@ -420,6 +436,7 @@
 -Xlinker --wrap=otLinkRawGetRssi
 -Xlinker --wrap=otLinkRawEnergyScan
 -Xlinker --wrap=otLinkRawReceive
+-Xlinker --wrap=otLinkRawSetAlternateShortAddress
 -Xlinker --wrap=otLinkRawSetMacFrameCounter
 -Xlinker --wrap=otLinkRawSetMacFrameCounterIfLarger
 -Xlinker --wrap=otLinkRawSetMacKey
@@ -442,9 +459,14 @@
 -Xlinker --wrap=otLoggingGetLevel
 -Xlinker --wrap=otMdnsIsEnabled
 -Xlinker --wrap=otMdnsIsQuestionUnicastAllowed
+-Xlinker --wrap=otMdnsGetNextBrowser
 -Xlinker --wrap=otMdnsGetNextHost
+-Xlinker --wrap=otMdnsGetNextIp4AddressResolver
+-Xlinker --wrap=otMdnsGetNextIp6AddressResolver
 -Xlinker --wrap=otMdnsGetNextKey
 -Xlinker --wrap=otMdnsGetNextService
+-Xlinker --wrap=otMdnsGetNextSrvResolver
+-Xlinker --wrap=otMdnsGetNextTxtResolver
 -Xlinker --wrap=otMdnsRegisterHost
 -Xlinker --wrap=otMdnsRegisterKey
 -Xlinker --wrap=otMdnsRegisterService
@@ -516,6 +538,7 @@
 -Xlinker --wrap=otIp4CidrToString
 -Xlinker --wrap=otIp4ExtractFromIp6Address
 -Xlinker --wrap=otIp4ToIp4MappedIp6Address
+-Xlinker --wrap=otNat64ClearIp4Cidr
 -Xlinker --wrap=otNat64GetCounters
 -Xlinker --wrap=otNat64GetErrorCounters
 -Xlinker --wrap=otNat64InitAddressMappingIterator
@@ -745,6 +768,7 @@
 -Xlinker --wrap=otThreadSetNetworkKey
 -Xlinker --wrap=otThreadSetNetworkKeyRef
 -Xlinker --wrap=otThreadSetNetworkName
+-Xlinker --wrap=otThreadWakeup
 -Xlinker --wrap=otThreadGetLinkMode
 -Xlinker --wrap=otThreadGetNetworkKeyRef
 -Xlinker --wrap=otThreadGetKeySwitchGuardTime
@@ -754,6 +778,7 @@
 -Xlinker --wrap=otThreadGetKeySequenceCounter
 -Xlinker --wrap=otThreadGetMaxTimeInQueue
 -Xlinker --wrap=otThreadGetPartitionId
+-Xlinker --wrap=otThreadGetStoreFrameCounterAhead
 -Xlinker --wrap=otThreadGetLeaderRouterId
 -Xlinker --wrap=otThreadGetLeaderWeight
 -Xlinker --wrap=otConvertDurationInSecondsToString
@@ -767,6 +792,7 @@
 -Xlinker --wrap=otThreadSetDiscoveryRequestCallback
 -Xlinker --wrap=otThreadSetKeySequenceCounter
 -Xlinker --wrap=otThreadSetKeySwitchGuardTime
+-Xlinker --wrap=otThreadSetStoreFrameCounterAhead
 -Xlinker --wrap=otThreadIsRouterEligible
 -Xlinker --wrap=otThreadIsRouterIdAllocated
 -Xlinker --wrap=otThreadIsTmfOriginFilterEnabled
@@ -826,6 +852,7 @@
 -Xlinker --wrap=otTrelGetCounters
 -Xlinker --wrap=otTrelGetNextPeer
 -Xlinker --wrap=otTrelGetNumberOfPeers
+-Xlinker --wrap=otTrelGetUdpPort
 -Xlinker --wrap=otTrelInitPeerIterator
 -Xlinker --wrap=otTrelResetCounters
 -Xlinker --wrap=otTrelSetEnabled

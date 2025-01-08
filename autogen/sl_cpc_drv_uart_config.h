@@ -5,7 +5,7 @@
 #include "sl_cpc_drv_uart_usart_vcom_config.h"
 
 #define SL_CPC_DRV_PERIPH_IS_USART
-#if defined(SL_CPC_DRV_PERIPH_IS_EUSART) && (EUART_COUNT > 0) 
+#if defined(SL_CPC_DRV_PERIPH_IS_EUSART) && defined(EUART_COUNT) && (EUART_COUNT > 0) 
 // EUART peripheral variant
 #define SL_CPC_DRV_PERIPH_NAME  EUART
 #else
@@ -18,6 +18,7 @@
 #define CAT(a,...) CAT_IMPL(a, __VA_ARGS__)
 #define CAT_IMPL(a,...) a ## __VA_ARGS__
 
+#define SL_CPC_DRV_UART_RX_BUFFER_MAX_COUNT          SL_CPC_DRV_UART_VCOM_RX_BUFFER_MAX_COUNT
 #define SL_CPC_DRV_UART_RX_QUEUE_SIZE                SL_CPC_DRV_UART_VCOM_RX_QUEUE_SIZE
 #define SL_CPC_DRV_UART_TX_QUEUE_SIZE                SL_CPC_DRV_UART_VCOM_TX_QUEUE_SIZE
 #define SL_CPC_DRV_UART_BAUDRATE                     SL_CPC_DRV_UART_VCOM_BAUDRATE

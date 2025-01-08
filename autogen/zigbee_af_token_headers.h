@@ -23,5 +23,5 @@
 
 #include "app/framework/plugin/green-power-server/green-power-server-tokens.h"
 
-#include "app/xncp/xncp-token.h"
+#include "app/framework/plugin/green-power-translation-table/green-power-translation-table-tokens.h"
 

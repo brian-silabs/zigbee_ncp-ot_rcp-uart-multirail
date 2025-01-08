@@ -220,6 +220,7 @@ void sli_zigbee_af_stack_status(
 sli_zigbee_af_stack_status_callback(status);
 sli_zigbee_af_green_power_client_stack_status_callback(status);
 sl_zigbee_af_green_power_server_stack_status_cb(status);
+sl_zigbee_af_green_power_translation_table_stack_status_cb(status);
 }
 
 
@@ -909,7 +910,9 @@ void sli_zigbee_af_gpep_incoming_message(
       // The length of the GPD command payload.
       uint8_t gpdCommandPayloadLength,
       // The GPD command payload.
-      uint8_t *gpdCommandPayload)
+      uint8_t *gpdCommandPayload,
+      // Rx packet information
+      sl_zigbee_rx_packet_info_t *packetInfo)
 {
 (void)status;
 (void)gpdLink;
@@ -925,9 +928,10 @@ void sli_zigbee_af_gpep_incoming_message(
 (void)proxyTableIndex;
 (void)gpdCommandPayloadLength;
 (void)gpdCommandPayload;
+(void)packetInfo;
 
-sli_zigbee_af_gpep_incoming_message_callback(status, gpdLink, sequenceNumber, addr, gpdfSecurityLevel, gpdfSecurityKeyType, autoCommissioning, bidirectionalInfo, gpdSecurityFrameCounter, gpdCommandId, mic, proxyTableIndex, gpdCommandPayloadLength, gpdCommandPayload);
-sli_zigbee_af_green_power_client_gpep_incoming_message_callback(status, gpdLink, sequenceNumber, addr, gpdfSecurityLevel, gpdfSecurityKeyType, autoCommissioning, bidirectionalInfo, gpdSecurityFrameCounter, gpdCommandId, mic, proxyTableIndex, gpdCommandPayloadLength, gpdCommandPayload);
+sli_zigbee_af_gpep_incoming_message_callback(status, gpdLink, sequenceNumber, addr, gpdfSecurityLevel, gpdfSecurityKeyType, autoCommissioning, bidirectionalInfo, gpdSecurityFrameCounter, gpdCommandId, mic, proxyTableIndex, gpdCommandPayloadLength, gpdCommandPayload, packetInfo);
+sli_zigbee_af_green_power_client_gpep_incoming_message_callback(status, gpdLink, sequenceNumber, addr, gpdfSecurityLevel, gpdfSecurityKeyType, autoCommissioning, bidirectionalInfo, gpdSecurityFrameCounter, gpdCommandId, mic, proxyTableIndex, gpdCommandPayloadLength, gpdCommandPayload, packetInfo);
 }
 
 
@@ -940,15 +944,6 @@ void sli_zigbee_af_rtos_idle(
 {
 (void)idleTimeMs;
 
-}
-
-
-
-// Rtos Stack Wakeup Isr
-void sli_zigbee_common_wakeup_isr(void)
-{
-
-sl_zigbee_wakeup_common_task();
 }
 
 

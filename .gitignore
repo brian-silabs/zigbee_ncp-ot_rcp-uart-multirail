@@ -4,3 +4,4 @@ GNU\ ARM\ v12.2.1\ -\ Default/
 ewarm-iar/
 Default/
 settings/
+*.bak*

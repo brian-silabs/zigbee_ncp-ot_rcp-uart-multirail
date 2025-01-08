@@ -36,6 +36,8 @@
 #include "sl_rail_mux_rename.h"
 #endif
 
+#include "sl_code_classification.h"
+
 #include "rail.h"
 #include "rail_ieee802154.h"
 #include "sl_rail_util_ieee802154_phy_select.h"
@@ -43,7 +45,6 @@
 #include "sl_assert.h"
 #include "sl_rail_mux.h"
 #include "coexistence-802154.h"
-#include "sl_rail_util_ieee802154_fast_channel_switching_config.h"
 
 extern RAIL_Handle_t emPhyRailHandle;
 
@@ -58,7 +59,6 @@ static sl_rail_util_ieee802154_radio_config_t sl_rail_util_get_desired_radio_con
 {
   return (SL_RAIL_UTIL_IEEE802154_RADIO_CONFIG_2P4_DEFAULT
           | (sl_rail_util_coex_is_coex_phy_selected() ? SL_RAIL_UTIL_RADIO_CONFIG_154_2P4_COEX: SL_RAIL_UTIL_IEEE802154_RADIO_CONFIG_2P4_DEFAULT)
-          | (sl_rail_util_ieee802154_is_fast_channel_switching_phy_selected() ? SL_RAIL_UTIL_IEEE802154_RADIO_CONFIG_2P4_ANTDIV: SL_RAIL_UTIL_IEEE802154_RADIO_CONFIG_2P4_DEFAULT)
   );
 }
 
@@ -211,6 +211,7 @@ RAIL_Status_t sl_rail_util_ieee802154_config_radio(RAIL_Handle_t railHandle)
 }
 
 #if RUNTIME_PHY_SELECT
+SL_CODE_CLASSIFY(SL_CODE_COMPONENT_RAIL_UTIL_IEEE802154_PHY_SELECT, SL_CODE_CLASS_TIME_CRITICAL)
 sl_rail_util_ieee802154_stack_status_t sl_rail_util_ieee802154_phy_select_on_event(
   sl_rail_util_ieee802154_stack_event_t stack_event,
   uint32_t supplement)
@@ -266,6 +267,7 @@ sl_rail_util_ieee802154_stack_status_t sl_rail_util_ieee802154_phy_select_on_eve
   return SL_RAIL_UTIL_IEEE802154_STACK_STATUS_SUCCESS;
 }
 #else
+SL_CODE_CLASSIFY(SL_CODE_COMPONENT_RAIL_UTIL_IEEE802154_PHY_SELECT, SL_CODE_CLASS_TIME_CRITICAL)
 sl_rail_util_ieee802154_stack_status_t sl_rail_util_ieee802154_phy_select_on_event(
   sl_rail_util_ieee802154_stack_event_t stack_event,
   uint32_t supplement)

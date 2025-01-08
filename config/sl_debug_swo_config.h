@@ -95,7 +95,7 @@
 
 // GPIO SWV on PA03
 #ifndef SL_DEBUG_SWV_PORT                       
-#define SL_DEBUG_SWV_PORT                        gpioPortA
+#define SL_DEBUG_SWV_PORT                        SL_GPIO_PORT_A
 #endif
 #ifndef SL_DEBUG_SWV_PIN                        
 #define SL_DEBUG_SWV_PIN                         3

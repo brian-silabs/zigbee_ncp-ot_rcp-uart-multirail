@@ -1,4 +1,4 @@
-/***************************************************************************//**
+/*******************************************************************************
  * @file
  * @brief OpenThread generic configuration file.
  *******************************************************************************
@@ -95,7 +95,7 @@
 #define PACKAGE_NAME "SL-OPENTHREAD"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "SL-OPENTHREAD/2.5.1.0_GitHub-1fceb225b"
+#define PACKAGE_STRING "SL-OPENTHREAD/2.6.0.0_GitHub-7f6723ffb"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "openthread"
@@ -107,13 +107,13 @@
  * Note: When adding the label below with OpenThread version, please make
  * sure it is a valid GitHub version.  Avoid merge or local commit hashes.
  */
-#define PACKAGE_VERSION "2.5.1.0_GitHub-1fceb225b"
+#define PACKAGE_VERSION "2.6.0.0_GitHub-7f6723ffb"
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "2.5.1.0_GitHub-1fceb225b"
+#define VERSION "2.6.0.0_GitHub-7f6723ffb"
 
 /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
    significant byte first (like Motorola and SPARC, unlike Intel). */

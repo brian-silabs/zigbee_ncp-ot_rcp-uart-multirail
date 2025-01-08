@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="uc.module.setup.ucConfig.com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:12.2.1.20221205.gcc" propertyScope="project">
   <folder name="config">
+    <folder name="prioconf">
+      <file name="priority_config.prioconf" generated="true" linked="false"/>
+    </folder>
     <file name="btl_interface_cfg.h" generated="true" linked="false"/>
     <file name="btl_interface_cfg_s2c4.h" generated="true" linked="false"/>
     <file name="sl_clock_manager_oscillator_config.h" generated="true" linked="false"/>
@@ -25,6 +28,7 @@
     <file name="psa_crypto_config.h" generated="true" linked="false"/>
     <file name="sl_device_init_dcdc_config.h" generated="true" linked="false"/>
     <file name="sl_openthread_rtos_config.h" generated="true" linked="false"/>
+    <file name="sl_openthread_radio_config.h" generated="true" linked="false"/>
     <file name="sl_memory_manager_config.h" generated="true" linked="false"/>
     <file name="circular_queue_config.h" generated="true" linked="false"/>
     <file name="sl_legacy_hal_wdog_config.h" generated="true" linked="false"/>
@@ -32,6 +36,7 @@
     <file name="sl_interrupt_manager_s2_config.h" generated="true" linked="false"/>
     <file name="sl_board_control_config.h" generated="true" linked="false"/>
     <file name="sl_rail_util_sequencer_config.h" generated="true" linked="false"/>
+    <file name="sl_802154_radio_priority_config.h" generated="true" linked="false"/>
     <file name="sl_debug_swo_config.h" generated="true" linked="false"/>
     <file name="sl_mx25_flash_shutdown_usart_config.h" generated="true" linked="false"/>
     <file name="sl_rail_util_coex_config.h" generated="true" linked="false"/>
@@ -59,12 +64,13 @@
     <file name="emlib_core_debug_config.h" generated="true" linked="false"/>
     <file name="sl_mbedtls_config.h" generated="true" linked="false"/>
     <file name="sl_mbedtls_device_config.h" generated="true" linked="false"/>
-    <file name="zcl_config_gp_combo.zap" generated="true" linked="false"/>
     <file name="green-power-adapter-config.h" generated="true" linked="false"/>
-    <file name="sl_iostream_vuart_config.h" generated="true" linked="false"/>
     <file name="green-power-client-config.h" generated="true" linked="false"/>
+    <file name="zcl_config_gp_combo.zap" generated="true" linked="false"/>
     <file name="green-power-server-config.h" generated="true" linked="false"/>
+    <file name="green-power-translation-table-config.h" generated="true" linked="false"/>
     <file name="af-support-config.h" generated="true" linked="false"/>
   </folder>
   <includePath uri="studio:/project/config"/>
+  <includePath uri="studio:/project/config/prioconf"/>
 </project>

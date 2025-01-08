@@ -66,7 +66,7 @@
 // <e SL_ZIGBEE_AF_PLUGIN_GREEN_POWER_ADAPTER_USE_CUSTOM_TOKEN_SYSTEM> Use custom token system implementation for green-power plugins
 // <i> Default: TRUE
 // <i> This enables abbility to use custom gp token system on green-power plugins.
-#define SL_ZIGBEE_AF_PLUGIN_GREEN_POWER_ADAPTER_USE_CUSTOM_TOKEN_SYSTEM  0
+#define SL_ZIGBEE_AF_PLUGIN_GREEN_POWER_ADAPTER_USE_CUSTOM_TOKEN_SYSTEM  1
 
 // <s SL_ZIGBEE_AF_PLUGIN_GREEN_POWER_ADAPTER_USE_CUSTOM_TOKEN_HEADER> File containing custom data type used for green power plugins
 // <i> Default: "green-power-adapter-type.h"

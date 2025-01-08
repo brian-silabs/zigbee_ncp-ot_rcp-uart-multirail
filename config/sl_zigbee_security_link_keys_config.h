@@ -18,7 +18,7 @@
 
 // <h>Zigbee Security Link Keys Library configuration
 
-// <o SL_ZIGBEE_KEY_TABLE_SIZE> Link Key Table Size <1-127>
+// <o SL_ZIGBEE_KEY_TABLE_SIZE> Link Key Table Size <1-254>
 // <i> Default: 6
 // <i> The maximum number of link key table entries supported by the stack.
 #define SL_ZIGBEE_KEY_TABLE_SIZE   12

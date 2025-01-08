@@ -189,6 +189,10 @@ void sl_zigbee_af_green_power_server_stack_status_cb(
       // Stack status
       sl_status_t status)
 ;
+void sl_zigbee_af_green_power_translation_table_stack_status_cb(
+      // Stack status
+      sl_status_t status)
+;
 
 // Redirect Outgoing Message
 void sli_zigbee_af_redirect_outgoing_message(
@@ -795,7 +799,9 @@ void sli_zigbee_af_gpep_incoming_message(
       // The length of the GPD command payload.
       uint8_t gpdCommandPayloadLength,
       // The GPD command payload.
-      uint8_t *gpdCommandPayload)
+      uint8_t *gpdCommandPayload,
+      // Rx packet information
+      sl_zigbee_rx_packet_info_t *packetInfo)
 ;
 void sli_zigbee_af_gpep_incoming_message_callback(
       // The status of the GPDF receive.
@@ -828,7 +834,9 @@ void sli_zigbee_af_gpep_incoming_message_callback(
       // The length of the GPD command payload.
       uint8_t gpdCommandPayloadLength,
       // The GPD command payload.
-      uint8_t *gpdCommandPayload)
+      uint8_t *gpdCommandPayload,
+      // Rx packet information
+      sl_zigbee_rx_packet_info_t *packetInfo)
 ;
 void sli_zigbee_af_green_power_client_gpep_incoming_message_callback(
       // The status of the GPDF receive.
@@ -861,7 +869,9 @@ void sli_zigbee_af_green_power_client_gpep_incoming_message_callback(
       // The length of the GPD command payload.
       uint8_t gpdCommandPayloadLength,
       // The GPD command payload.
-      uint8_t *gpdCommandPayload)
+      uint8_t *gpdCommandPayload,
+      // Rx packet information
+      sl_zigbee_rx_packet_info_t *packetInfo)
 ;
 
 // Rtos Idle
@@ -869,12 +879,6 @@ void sli_zigbee_af_green_power_client_gpep_incoming_message_callback(
 void sli_zigbee_af_rtos_idle(
       // Return: Idle time duration
       uint32_t *idleTimeMs)
-;
-
-// Rtos Stack Wakeup Isr
-void sli_zigbee_common_wakeup_isr(void)
-;
-void sl_zigbee_wakeup_common_task(void)
 ;
 
 // Radio Needs Calibrating

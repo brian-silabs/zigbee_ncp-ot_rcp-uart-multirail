@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="uc.module.setup.componentSetup.com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:12.2.1.20221205.gcc" propertyScope="project">
-  <folder name="simplicity_sdk_2024.6.1">
+  <folder name="simplicity_sdk_2024.12.0">
     <folder name="platform">
       <folder name="Device">
         <folder name="SiliconLabs">
@@ -74,11 +74,13 @@
           <file name="sl_event_system.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_event_system.h"/>
           <file name="sl_assert.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_assert.h"/>
           <file name="sl_common.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_common.h"/>
+          <file name="sl_compiler.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_compiler.h"/>
           <file name="sl_core.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_core.h"/>
           <file name="sl_slist.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_slist.h"/>
           <file name="sl_status.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_status.h"/>
         </folder>
         <folder name="src">
+          <file name="sl_cmsis_os2_common.c" linked="false" uri="studio:/sdk/platform/common/src/sl_cmsis_os2_common.c"/>
           <file name="sli_cmsis_os2_ext_task_register.c" linked="false" uri="studio:/sdk/platform/common/src/sli_cmsis_os2_ext_task_register.c"/>
           <file name="sl_event_system.c" linked="false" uri="studio:/sdk/platform/common/src/sl_event_system.c"/>
           <file name="sl_assert.c" linked="false" uri="studio:/sdk/platform/common/src/sl_assert.c"/>
@@ -133,7 +135,9 @@
             <file name="sl_cpc_instance.c" linked="false" uri="studio:/sdk/platform/service/cpc/src/sl_cpc_instance.c"/>
             <file name="sl_cpc_memory.c" linked="false" uri="studio:/sdk/platform/service/cpc/src/sl_cpc_memory.c"/>
             <file name="sl_cpc_dispatcher.c" linked="false" uri="studio:/sdk/platform/service/cpc/src/sl_cpc_dispatcher.c"/>
+            <file name="sli_cpc_assert.c" linked="false" uri="studio:/sdk/platform/service/cpc/src/sli_cpc_assert.c"/>
             <file name="sl_cpc_system_secondary.c" linked="false" uri="studio:/sdk/platform/service/cpc/src/sl_cpc_system_secondary.c"/>
+            <file name="sl_cpc_system_secondary_efr.c" linked="false" uri="studio:/sdk/platform/service/cpc/src/sl_cpc_system_secondary_efr.c"/>
             <file name="sl_cpc_drv_uart.c" linked="false" uri="studio:/sdk/platform/service/cpc/src/sl_cpc_drv_uart.c"/>
             <file name="sl_cpc_security.c" linked="false" uri="studio:/sdk/platform/service/cpc/src/sl_cpc_security.c"/>
           </folder>
@@ -141,6 +145,7 @@
             <file name="sl_cpc.h" linked="false" uri="studio:/sdk/platform/service/cpc/inc/sl_cpc.h"/>
             <file name="sl_cpc_weak_prototypes.h" linked="false" uri="studio:/sdk/platform/service/cpc/inc/sl_cpc_weak_prototypes.h"/>
             <file name="sli_cpc.h" linked="false" uri="studio:/sdk/platform/service/cpc/inc/sli_cpc.h"/>
+            <file name="sli_cpc_assert.h" linked="false" uri="studio:/sdk/platform/service/cpc/inc/sli_cpc_assert.h"/>
             <file name="sli_cpc_types.h" linked="false" uri="studio:/sdk/platform/service/cpc/inc/sli_cpc_types.h"/>
             <file name="sli_cpc_system_common.h" linked="false" uri="studio:/sdk/platform/service/cpc/inc/sli_cpc_system_common.h"/>
             <file name="sli_cpc_drv.h" linked="false" uri="studio:/sdk/platform/service/cpc/inc/sli_cpc_drv.h"/>
@@ -161,11 +166,14 @@
         <folder name="device_manager">
           <folder name="src">
             <file name="sl_device_clock.c" linked="false" uri="studio:/sdk/platform/service/device_manager/src/sl_device_clock.c"/>
+            <file name="sl_device_gpio.c" linked="false" uri="studio:/sdk/platform/service/device_manager/src/sl_device_gpio.c"/>
             <file name="sl_device_peripheral.c" linked="false" uri="studio:/sdk/platform/service/device_manager/src/sl_device_peripheral.c"/>
           </folder>
           <folder name="inc">
             <file name="sl_device_clock.h" linked="false" uri="studio:/sdk/platform/service/device_manager/inc/sl_device_clock.h"/>
+            <file name="sl_device_gpio.h" linked="false" uri="studio:/sdk/platform/service/device_manager/inc/sl_device_gpio.h"/>
             <file name="sl_device_peripheral.h" linked="false" uri="studio:/sdk/platform/service/device_manager/inc/sl_device_peripheral.h"/>
+            <file name="sl_device_peripheral_types.h" linked="false" uri="studio:/sdk/platform/service/device_manager/inc/sl_device_peripheral_types.h"/>
           </folder>
           <folder name="clocks">
             <file name="sl_device_clock_efr32xg24.c" linked="false" uri="studio:/sdk/platform/service/device_manager/clocks/sl_device_clock_efr32xg24.c"/>
@@ -210,15 +218,12 @@
             <file name="sl_iostream.c" linked="false" uri="studio:/sdk/platform/service/iostream/src/sl_iostream.c"/>
             <file name="sl_iostream_debug.c" linked="false" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_debug.c"/>
             <file name="sl_iostream_swo_itm_8.c" linked="false" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_swo_itm_8.c"/>
-            <file name="sl_iostream_vuart.c" linked="false" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_vuart.c"/>
           </folder>
           <folder name="inc">
             <file name="sl_iostream.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream.h"/>
             <file name="sl_iostream_debug.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_debug.h"/>
             <file name="sli_iostream_swo_itm_8.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sli_iostream_swo_itm_8.h"/>
             <file name="sl_iostream_swo_itm_8.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_swo_itm_8.h"/>
-            <file name="sl_iostream_vuart.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_vuart.h"/>
-            <file name="sl_iostream_swo.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_swo.h"/>
           </folder>
         </folder>
         <folder name="legacy_hal">
@@ -279,6 +284,7 @@
             <file name="sl_memory_manager_retarget.c" linked="false" uri="studio:/sdk/platform/service/memory_manager/src/sl_memory_manager_retarget.c"/>
             <file name="sli_memory_manager.h" linked="false" uri="studio:/sdk/platform/service/memory_manager/src/sli_memory_manager.h"/>
             <file name="sl_memory_manager_cpp.cpp" linked="false" uri="studio:/sdk/platform/service/memory_manager/src/sl_memory_manager_cpp.cpp"/>
+            <file name="sl_memory_manager_pool_common.c" linked="false" uri="studio:/sdk/platform/service/memory_manager/src/sl_memory_manager_pool_common.c"/>
             <file name="sl_memory_manager_pool.c" linked="false" uri="studio:/sdk/platform/service/memory_manager/src/sl_memory_manager_pool.c"/>
             <file name="sl_memory_manager_region.c" linked="false" uri="studio:/sdk/platform/service/memory_manager/src/sl_memory_manager_region.c"/>
           </folder>
@@ -297,10 +303,16 @@
         </folder>
         <folder name="power_manager">
           <folder name="src">
-            <file name="sl_power_manager.c" linked="false" uri="studio:/sdk/platform/service/power_manager/src/sl_power_manager.c"/>
-            <file name="sl_power_manager_debug.c" linked="false" uri="studio:/sdk/platform/service/power_manager/src/sl_power_manager_debug.c"/>
-            <file name="sl_power_manager_hal_s2.c" linked="false" uri="studio:/sdk/platform/service/power_manager/src/sl_power_manager_hal_s2.c"/>
-            <file name="sli_power_manager_private.h" linked="false" uri="studio:/sdk/platform/service/power_manager/src/sli_power_manager_private.h"/>
+            <folder name="common">
+              <file name="sl_power_manager_common.c" linked="false" uri="studio:/sdk/platform/service/power_manager/src/common/sl_power_manager_common.c"/>
+              <file name="sl_power_manager_em4.c" linked="false" uri="studio:/sdk/platform/service/power_manager/src/common/sl_power_manager_em4.c"/>
+            </folder>
+            <folder name="sleep_loop">
+              <file name="sl_power_manager.c" linked="false" uri="studio:/sdk/platform/service/power_manager/src/sleep_loop/sl_power_manager.c"/>
+              <file name="sl_power_manager_debug.c" linked="false" uri="studio:/sdk/platform/service/power_manager/src/sleep_loop/sl_power_manager_debug.c"/>
+              <file name="sl_power_manager_hal_s2.c" linked="false" uri="studio:/sdk/platform/service/power_manager/src/sleep_loop/sl_power_manager_hal_s2.c"/>
+              <file name="sli_power_manager_private.h" linked="false" uri="studio:/sdk/platform/service/power_manager/src/sleep_loop/sli_power_manager_private.h"/>
+            </folder>
           </folder>
           <folder name="inc">
             <file name="sl_power_manager.h" linked="false" uri="studio:/sdk/platform/service/power_manager/inc/sl_power_manager.h"/>
@@ -388,6 +400,14 @@
             <file name="sl_debug_swo.h" linked="false" uri="studio:/sdk/platform/driver/debug/inc/sl_debug_swo.h"/>
           </folder>
         </folder>
+        <folder name="gpio">
+          <folder name="src">
+            <file name="sl_gpio.c" linked="false" uri="studio:/sdk/platform/driver/gpio/src/sl_gpio.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_gpio.h" linked="false" uri="studio:/sdk/platform/driver/gpio/inc/sl_gpio.h"/>
+          </folder>
+        </folder>
       </folder>
       <folder name="emdrv">
         <folder name="dmadrv">
@@ -417,19 +437,29 @@
         <folder name="nvm3">
           <folder name="inc">
             <file name="nvm3_default.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/inc/nvm3_default.h"/>
-            <file name="nvm3.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/inc/nvm3.h"/>
             <file name="nvm3_generic.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/inc/nvm3_generic.h"/>
+            <file name="nvm3.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/inc/nvm3.h"/>
+            <file name="nvm3_cache.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/inc/nvm3_cache.h"/>
             <file name="nvm3_hal.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/inc/nvm3_hal.h"/>
             <file name="nvm3_hal_flash.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/inc/nvm3_hal_flash.h"/>
             <file name="nvm3_lock.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/inc/nvm3_lock.h"/>
+            <file name="nvm3_object.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/inc/nvm3_object.h"/>
+            <file name="nvm3_page.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/inc/nvm3_page.h"/>
+            <file name="nvm3_trace.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/inc/nvm3_trace.h"/>
+            <file name="nvm3_utils.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/inc/nvm3_utils.h"/>
           </folder>
           <folder name="src">
             <file name="nvm3_default_common_linker.c" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/src/nvm3_default_common_linker.c"/>
+            <file name="nvm3.c" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/src/nvm3.c"/>
+            <file name="nvm3_cache.c" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/src/nvm3_cache.c"/>
             <file name="nvm3_hal_flash.c" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/src/nvm3_hal_flash.c"/>
             <file name="nvm3_lock.c" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/src/nvm3_lock.c"/>
+            <file name="nvm3_object.c" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/src/nvm3_object.c"/>
+            <file name="nvm3_page.c" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/src/nvm3_page.c"/>
+            <file name="nvm3_utils.c" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/src/nvm3_utils.c"/>
           </folder>
-          <folder name="lib">
-            <file name="libnvm3_CM33_gcc.a" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/lib/libnvm3_CM33_gcc.a"/>
+          <folder name="config">
+            <file name="nvm3_config.h" linked="false" uri="studio:/sdk/platform/emdrv/nvm3/config/nvm3_config.h"/>
           </folder>
         </folder>
         <folder name="ustimer">
@@ -452,7 +482,6 @@
           <file name="em_msc.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_msc.c"/>
           <file name="em_prs.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_prs.c"/>
           <file name="em_rmu.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_rmu.c"/>
-          <file name="em_se.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_se.c"/>
           <file name="em_system.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_system.c"/>
           <file name="em_timer.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_timer.c"/>
           <file name="em_usart.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_usart.c"/>
@@ -478,7 +507,6 @@
           <file name="em_msc_compat.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_msc_compat.h"/>
           <file name="em_prs.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_prs.h"/>
           <file name="em_rmu.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_rmu.h"/>
-          <file name="em_se.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_se.h"/>
           <file name="em_syscfg.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_syscfg.h"/>
           <file name="em_system.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_system.h"/>
           <file name="em_system_generic.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_system_generic.h"/>
@@ -488,12 +516,17 @@
         </folder>
       </folder>
       <folder name="peripheral">
-        <folder name="src">
-          <file name="sl_hal_sysrtc.c" linked="false" uri="studio:/sdk/platform/peripheral/src/sl_hal_sysrtc.c"/>
-        </folder>
         <folder name="inc">
+          <file name="sl_hal_bus.h" linked="false" uri="studio:/sdk/platform/peripheral/inc/sl_hal_bus.h"/>
+          <file name="sl_hal_gpio.h" linked="false" uri="studio:/sdk/platform/peripheral/inc/sl_hal_gpio.h"/>
           <file name="sl_hal_sysrtc.h" linked="false" uri="studio:/sdk/platform/peripheral/inc/sl_hal_sysrtc.h"/>
           <file name="sl_hal_sysrtc_compat.h" linked="false" uri="studio:/sdk/platform/peripheral/inc/sl_hal_sysrtc_compat.h"/>
+          <file name="peripheral_sysrtc.h" linked="false" uri="studio:/sdk/platform/peripheral/inc/peripheral_sysrtc.h"/>
+          <file name="peripheral_sysrtc_compat.h" linked="false" uri="studio:/sdk/platform/peripheral/inc/peripheral_sysrtc_compat.h"/>
+        </folder>
+        <folder name="src">
+          <file name="sl_hal_gpio.c" linked="false" uri="studio:/sdk/platform/peripheral/src/sl_hal_gpio.c"/>
+          <file name="sl_hal_sysrtc.c" linked="false" uri="studio:/sdk/platform/peripheral/src/sl_hal_sysrtc.c"/>
         </folder>
       </folder>
       <folder name="security">
@@ -539,6 +572,7 @@
               <file name="sli_psa_driver_init.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/src/sli_psa_driver_init.c"/>
               <file name="sli_psa_driver_common.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/src/sli_psa_driver_common.c"/>
               <file name="sli_se_version_dependencies.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/src/sli_se_version_dependencies.c"/>
+              <file name="sl_psa_its_nvm3.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/src/sl_psa_its_nvm3.c"/>
               <file name="sli_se_driver_builtin_keys.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/src/sli_se_driver_builtin_keys.c"/>
               <file name="sli_se_driver_key_management.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/src/sli_se_driver_key_management.c"/>
               <file name="sli_se_driver_key_derivation.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/src/sli_se_driver_key_derivation.c"/>
@@ -555,7 +589,6 @@
               <file name="sli_se_opaque_key_derivation.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/src/sli_se_opaque_key_derivation.c"/>
               <file name="sli_se_opaque_driver_cipher.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/src/sli_se_opaque_driver_cipher.c"/>
               <file name="sli_se_opaque_driver_aead.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/src/sli_se_opaque_driver_aead.c"/>
-              <file name="sl_psa_its_nvm3.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/src/sl_psa_its_nvm3.c"/>
             </folder>
             <folder name="inc">
               <folder name="psa">
@@ -564,8 +597,8 @@
                 <file name="error.h" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/inc/psa/error.h"/>
               </folder>
               <file name="sli_psa_driver_common.h" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/inc/sli_psa_driver_common.h"/>
-              <file name="sli_psa_driver_features.h" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/inc/sli_psa_driver_features.h"/>
               <file name="sli_se_version_dependencies.h" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/inc/sli_se_version_dependencies.h"/>
+              <file name="sli_psa_driver_features.h" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/inc/sli_psa_driver_features.h"/>
               <file name="sli_se_driver_aead.h" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/inc/sli_se_driver_aead.h"/>
               <file name="sli_se_driver_cipher.h" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/inc/sli_se_driver_cipher.h"/>
               <file name="sli_se_driver_key_derivation.h" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_psa_driver/inc/sli_se_driver_key_derivation.h"/>
@@ -589,8 +622,6 @@
               <file name="sl_se_manager_signature.c" linked="false" uri="studio:/sdk/platform/security/sl_component/se_manager/src/sl_se_manager_signature.c"/>
               <file name="sl_se_manager_attestation.c" linked="false" uri="studio:/sdk/platform/security/sl_component/se_manager/src/sl_se_manager_attestation.c"/>
               <file name="sli_se_manager_mailbox.c" linked="false" uri="studio:/sdk/platform/security/sl_component/se_manager/src/sli_se_manager_mailbox.c"/>
-              <file name="sli_se_manager_osal.h" linked="false" uri="studio:/sdk/platform/security/sl_component/se_manager/src/sli_se_manager_osal.h"/>
-              <file name="sli_se_manager_osal_cmsis_rtos2.h" linked="false" uri="studio:/sdk/platform/security/sl_component/se_manager/src/sli_se_manager_osal_cmsis_rtos2.h"/>
             </folder>
             <folder name="inc">
               <file name="sl_se_manager.h" linked="false" uri="studio:/sdk/platform/security/sl_component/se_manager/inc/sl_se_manager.h"/>
@@ -618,6 +649,15 @@
               <file name="sli_radioaes_management.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_protocol_crypto/src/sli_radioaes_management.c"/>
               <file name="sli_protocol_crypto.h" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_protocol_crypto/src/sli_protocol_crypto.h"/>
               <file name="sli_radioaes_management.h" linked="false" uri="studio:/sdk/platform/security/sl_component/sl_protocol_crypto/src/sli_radioaes_management.h"/>
+            </folder>
+          </folder>
+          <folder name="sli_psec_osal">
+            <folder name="src">
+              <file name="sli_psec_osal_cmsis_rtos2.c" linked="false" uri="studio:/sdk/platform/security/sl_component/sli_psec_osal/src/sli_psec_osal_cmsis_rtos2.c"/>
+            </folder>
+            <folder name="inc">
+              <file name="sli_psec_osal.h" linked="false" uri="studio:/sdk/platform/security/sl_component/sli_psec_osal/inc/sli_psec_osal.h"/>
+              <file name="sli_psec_osal_cmsis_rtos2.h" linked="false" uri="studio:/sdk/platform/security/sl_component/sli_psec_osal/inc/sli_psec_osal_cmsis_rtos2.h"/>
             </folder>
           </folder>
         </folder>
@@ -754,6 +794,7 @@
             <file name="sl_rail_mux.h" linked="false" uri="studio:/sdk/platform/radio/mac/rail_mux/sl_rail_mux.h"/>
             <file name="sl_rail_mux_rename.h" linked="false" uri="studio:/sdk/platform/radio/mac/rail_mux/sl_rail_mux_rename.h"/>
           </folder>
+          <file name="mfglib_modes.h" linked="false" uri="studio:/sdk/platform/radio/mac/mfglib_modes.h"/>
           <file name="indirect-queue.h" linked="false" uri="studio:/sdk/platform/radio/mac/indirect-queue.h"/>
           <file name="lower-mac.h" linked="false" uri="studio:/sdk/platform/radio/mac/lower-mac.h"/>
           <file name="lower-mac-debug.h" linked="false" uri="studio:/sdk/platform/radio/mac/lower-mac-debug.h"/>
@@ -819,19 +860,13 @@
       </folder>
       <folder name="third_party">
         <folder name="freertos">
-          <folder name="cmsis">
-            <folder name="Source">
-              <file name="cmsis_os2.c" linked="false" uri="studio:/sdk/util/third_party/freertos/cmsis/Source/cmsis_os2.c"/>
-            </folder>
-            <folder name="Include">
-              <file name="freertos_os2.h" linked="false" uri="studio:/sdk/util/third_party/freertos/cmsis/Include/freertos_os2.h"/>
-              <file name="freertos_mpool.h" linked="false" uri="studio:/sdk/util/third_party/freertos/cmsis/Include/freertos_mpool.h"/>
-            </folder>
-          </folder>
           <folder name="kernel">
             <folder name="portable">
               <folder name="SiliconLabs">
                 <file name="tick_power_manager.c" linked="false" uri="studio:/sdk/util/third_party/freertos/kernel/portable/SiliconLabs/tick_power_manager.c"/>
+              </folder>
+              <folder name="MemMang">
+                <file name="heap_3.c" linked="false" uri="studio:/sdk/util/third_party/freertos/kernel/portable/MemMang/heap_3.c"/>
               </folder>
               <folder name="GCC">
                 <folder name="ARM_CM33_NTZ">
@@ -842,9 +877,6 @@
                     <file name="portasm.h" linked="false" uri="studio:/sdk/util/third_party/freertos/kernel/portable/GCC/ARM_CM33_NTZ/non_secure/portasm.h"/>
                   </folder>
                 </folder>
-              </folder>
-              <folder name="MemMang">
-                <file name="heap_3.c" linked="false" uri="studio:/sdk/util/third_party/freertos/kernel/portable/MemMang/heap_3.c"/>
               </folder>
             </folder>
             <folder name="include">
@@ -875,6 +907,15 @@
             <file name="tasks.c" linked="false" uri="studio:/sdk/util/third_party/freertos/kernel/tasks.c"/>
             <file name="timers.c" linked="false" uri="studio:/sdk/util/third_party/freertos/kernel/timers.c"/>
           </folder>
+          <folder name="cmsis">
+            <folder name="Source">
+              <file name="cmsis_os2.c" linked="false" uri="studio:/sdk/util/third_party/freertos/cmsis/Source/cmsis_os2.c"/>
+            </folder>
+            <folder name="Include">
+              <file name="freertos_os2.h" linked="false" uri="studio:/sdk/util/third_party/freertos/cmsis/Include/freertos_os2.h"/>
+              <file name="freertos_mpool.h" linked="false" uri="studio:/sdk/util/third_party/freertos/cmsis/Include/freertos_mpool.h"/>
+            </folder>
+          </folder>
         </folder>
         <folder name="mbedtls">
           <folder name="library">
@@ -884,6 +925,7 @@
             <file name="base64.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/base64.c"/>
             <file name="ccm.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ccm.c"/>
             <file name="cipher.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/cipher.c"/>
+            <file name="block_cipher.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/block_cipher.c"/>
             <file name="cipher_wrap.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/cipher_wrap.c"/>
             <file name="cmac.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/cmac.c"/>
             <file name="ecp.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ecp.c"/>
@@ -900,6 +942,7 @@
             <file name="oid.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/oid.c"/>
             <file name="pem.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/pem.c"/>
             <file name="pk.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/pk.c"/>
+            <file name="pk_ecc.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/pk_ecc.c"/>
             <file name="pkparse.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/pkparse.c"/>
             <file name="pkwrite.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/pkwrite.c"/>
             <file name="pk_wrap.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/pk_wrap.c"/>
@@ -917,13 +960,18 @@
             <file name="bn_mul.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/bn_mul.h"/>
             <file name="base64_internal.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/base64_internal.h"/>
             <file name="bignum_core.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/bignum_core.h"/>
+            <file name="bignum_internal.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/bignum_internal.h"/>
             <file name="bignum_mod.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/bignum_mod.h"/>
             <file name="bignum_mod_raw.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/bignum_mod_raw.h"/>
             <file name="bignum_mod_raw_invasive.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/bignum_mod_raw_invasive.h"/>
+            <file name="block_cipher_internal.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/block_cipher_internal.h"/>
+            <file name="check_crypto_config.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/check_crypto_config.h"/>
             <file name="cipher_wrap.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/cipher_wrap.h"/>
             <file name="common.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/common.h"/>
             <file name="constant_time_impl.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/constant_time_impl.h"/>
             <file name="constant_time_internal.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/constant_time_internal.h"/>
+            <file name="ctr.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ctr.h"/>
+            <file name="debug_internal.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/debug_internal.h"/>
             <file name="ecp_internal_alt.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ecp_internal_alt.h"/>
             <file name="ecp_invasive.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ecp_invasive.h"/>
             <file name="entropy_poll.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/entropy_poll.h"/>
@@ -940,11 +988,14 @@
             <file name="pkwrite.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/pkwrite.h"/>
             <file name="psa_util_internal.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/psa_util_internal.h"/>
             <file name="rsa_alt_helpers.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/rsa_alt_helpers.h"/>
+            <file name="rsa_internal.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/rsa_internal.h"/>
             <file name="ssl_debug_helpers.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ssl_debug_helpers.h"/>
             <file name="ssl_client.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ssl_client.h"/>
+            <file name="ssl_ciphersuites_internal.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ssl_ciphersuites_internal.h"/>
             <file name="ssl_misc.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ssl_misc.h"/>
             <file name="ssl_tls13_invasive.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ssl_tls13_invasive.h"/>
             <file name="ssl_tls13_keys.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ssl_tls13_keys.h"/>
+            <file name="x509_internal.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/x509_internal.h"/>
             <file name="ssl_cache.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ssl_cache.c"/>
             <file name="ssl_ciphersuites.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ssl_ciphersuites.c"/>
             <file name="ssl_client.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/ssl_client.c"/>
@@ -977,7 +1028,6 @@
             <file name="psa_crypto_pake.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/psa_crypto_pake.c"/>
             <file name="psa_crypto_rsa.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/psa_crypto_rsa.c"/>
             <file name="psa_crypto_se.c" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/psa_crypto_se.c"/>
-            <file name="check_crypto_config.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/check_crypto_config.h"/>
             <file name="psa_crypto_aead.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/psa_crypto_aead.h"/>
             <file name="psa_crypto_cipher.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/psa_crypto_cipher.h"/>
             <file name="psa_crypto_core.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/library/psa_crypto_core.h"/>
@@ -1005,6 +1055,7 @@
               <file name="asn1write.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/mbedtls/asn1write.h"/>
               <file name="base64.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/mbedtls/base64.h"/>
               <file name="bignum.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/mbedtls/bignum.h"/>
+              <file name="block_cipher.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/mbedtls/block_cipher.h"/>
               <file name="build_info.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/mbedtls/build_info.h"/>
               <file name="camellia.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/mbedtls/camellia.h"/>
               <file name="ccm.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/mbedtls/ccm.h"/>
@@ -1076,6 +1127,7 @@
             <folder name="psa">
               <file name="crypto.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/psa/crypto.h"/>
               <file name="crypto_adjust_auto_enabled.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/psa/crypto_adjust_auto_enabled.h"/>
+              <file name="crypto_adjust_config_dependencies.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/psa/crypto_adjust_config_dependencies.h"/>
               <file name="crypto_adjust_config_key_pair_types.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/psa/crypto_adjust_config_key_pair_types.h"/>
               <file name="crypto_adjust_config_synonyms.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/psa/crypto_adjust_config_synonyms.h"/>
               <file name="build_info.h" linked="false" uri="studio:/sdk/util/third_party/mbedtls/include/psa/build_info.h"/>
@@ -1220,7 +1272,7 @@
                 <file name="array.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/array.hpp"/>
                 <file name="as_core_type.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/as_core_type.hpp"/>
                 <file name="binary_search.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/binary_search.hpp"/>
-                <file name="bit_vector.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/bit_vector.hpp"/>
+                <file name="bit_set.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/bit_set.hpp"/>
                 <file name="callback.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/callback.hpp"/>
                 <file name="clearable.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/clearable.hpp"/>
                 <file name="code_utils.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/code_utils.hpp"/>
@@ -1241,7 +1293,6 @@
                 <file name="iterator_utils.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/iterator_utils.hpp"/>
                 <file name="linked_list.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/linked_list.hpp"/>
                 <file name="locator.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/locator.hpp"/>
-                <file name="locator_getters.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/locator_getters.hpp"/>
                 <file name="log.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/log.hpp"/>
                 <file name="logging.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/logging.hpp"/>
                 <file name="message.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/message.hpp"/>
@@ -1250,6 +1301,7 @@
                 <file name="notifier.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/notifier.hpp"/>
                 <file name="num_utils.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/num_utils.hpp"/>
                 <file name="numeric_limits.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/numeric_limits.hpp"/>
+                <file name="offset_range.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/offset_range.hpp"/>
                 <file name="owned_ptr.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/owned_ptr.hpp"/>
                 <file name="owning_list.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/owning_list.hpp"/>
                 <file name="pool.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/common/pool.hpp"/>
@@ -1327,6 +1379,7 @@
                 <file name="time_sync.h" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/config/time_sync.h"/>
                 <file name="tmf.h" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/config/tmf.h"/>
                 <file name="trel.h" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/config/trel.h"/>
+                <file name="wakeup.h" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/config/wakeup.h"/>
               </folder>
               <folder name="crypto">
                 <file name="aes_ccm.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/crypto/aes_ccm.hpp"/>
@@ -1360,21 +1413,24 @@
                 <file name="mac.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/mac.hpp"/>
                 <file name="mac_filter.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/mac_filter.hpp"/>
                 <file name="mac_frame.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/mac_frame.hpp"/>
+                <file name="mac_header_ie.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/mac_header_ie.hpp"/>
                 <file name="mac_links.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/mac_links.hpp"/>
                 <file name="mac_types.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/mac_types.hpp"/>
                 <file name="sub_mac.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/sub_mac.hpp"/>
+                <file name="wakeup_tx_scheduler.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/wakeup_tx_scheduler.hpp"/>
                 <file name="link_raw.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/link_raw.cpp"/>
                 <file name="mac_frame.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/mac_frame.cpp"/>
+                <file name="mac_header_ie.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/mac_header_ie.cpp"/>
                 <file name="mac_types.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/mac_types.cpp"/>
                 <file name="sub_mac.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/sub_mac.cpp"/>
                 <file name="sub_mac_callbacks.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/sub_mac_callbacks.cpp"/>
+                <file name="sub_mac_csl_receiver.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/mac/sub_mac_csl_receiver.cpp"/>
               </folder>
               <folder name="meshcop">
                 <file name="announce_begin_client.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/meshcop/announce_begin_client.hpp"/>
                 <file name="border_agent.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/meshcop/border_agent.hpp"/>
                 <file name="commissioner.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/meshcop/commissioner.hpp"/>
                 <file name="dataset.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/meshcop/dataset.hpp"/>
-                <file name="dataset_local.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/meshcop/dataset_local.hpp"/>
                 <file name="dataset_manager.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/meshcop/dataset_manager.hpp"/>
                 <file name="dataset_updater.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/meshcop/dataset_updater.hpp"/>
                 <file name="energy_scan_client.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/meshcop/energy_scan_client.hpp"/>
@@ -1501,6 +1557,7 @@
                 <file name="power_calibration.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/utils/power_calibration.hpp"/>
                 <file name="slaac_address.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/utils/slaac_address.hpp"/>
                 <file name="srp_client_buffers.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/utils/srp_client_buffers.hpp"/>
+                <file name="static_counter.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/utils/static_counter.hpp"/>
                 <file name="verhoeff_checksum.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/utils/verhoeff_checksum.hpp"/>
                 <file name="parse_cmdline.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/utils/parse_cmdline.cpp"/>
                 <file name="power_calibration.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/core/utils/power_calibration.cpp"/>
@@ -1528,6 +1585,8 @@
                 <file name="spinel_decoder.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/spinel_decoder.cpp"/>
                 <file name="spinel_driver.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/spinel_driver.cpp"/>
                 <file name="spinel_encoder.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/spinel_encoder.cpp"/>
+                <file name="spinel_helper.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/spinel_helper.cpp"/>
+                <file name="spinel_prop_codec.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/spinel_prop_codec.cpp"/>
                 <file name="coprocessor_type.h" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/coprocessor_type.h"/>
                 <file name="logger.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/logger.hpp"/>
                 <file name="multi_frame_buffer.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/multi_frame_buffer.hpp"/>
@@ -1540,16 +1599,27 @@
                 <file name="spinel_driver.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/spinel_driver.hpp"/>
                 <file name="spinel_encoder.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/spinel_encoder.hpp"/>
                 <file name="spinel_encrypter.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/spinel_encrypter.hpp"/>
+                <file name="spinel_helper.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/spinel_helper.hpp"/>
                 <file name="spinel_interface.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/spinel_interface.hpp"/>
                 <file name="spinel_platform.h" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/spinel_platform.h"/>
+                <file name="spinel_prop_codec.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/spinel_prop_codec.hpp"/>
                 <file name="openthread-spinel-config.h" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/spinel/openthread-spinel-config.h"/>
               </folder>
               <folder name="hdlc">
                 <file name="hdlc.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/hdlc/hdlc.cpp"/>
                 <file name="hdlc.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/hdlc/hdlc.hpp"/>
               </folder>
+              <folder name="utils">
+                <file name="endian.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/utils/endian.hpp"/>
+                <file name="math.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/utils/math.hpp"/>
+                <file name="utils.hpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/lib/utils/utils.hpp"/>
+              </folder>
             </folder>
             <folder name="ncp">
+              <folder name="platform">
+                <file name="dnssd.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/ncp/platform/dnssd.cpp"/>
+                <file name="infra_if.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/ncp/platform/infra_if.cpp"/>
+              </folder>
               <file name="changed_props_set.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/ncp/changed_props_set.cpp"/>
               <file name="multipan_platform.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/ncp/multipan_platform.cpp"/>
               <file name="ncp_base.cpp" linked="false" uri="studio:/sdk/util/third_party/openthread/src/ncp/ncp_base.cpp"/>
@@ -1678,6 +1748,13 @@
             <file name="openthread-core-efr32-config-check.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/openthread-core-efr32-config-check.h"/>
             <file name="platform-efr32.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/platform-efr32.h"/>
             <file name="sleep.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/sleep.h"/>
+            <file name="uart.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/uart.h"/>
+            <file name="ieee802154-packet-utils.hpp" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/ieee802154-packet-utils.hpp"/>
+            <file name="platform-band.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/platform-band.h"/>
+            <file name="rail_config.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/rail_config.h"/>
+            <file name="diag.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/diag.h"/>
+            <file name="soft_source_match_table.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/soft_source_match_table.h"/>
+            <file name="sl_multipan.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/sl_multipan.h"/>
             <file name="soft_source_match_table.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/soft_source_match_table.c"/>
             <file name="alarm.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/alarm.c"/>
             <file name="diag.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/diag.c"/>
@@ -1693,12 +1770,6 @@
             <file name="radio_power_manager.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/radio_power_manager.c"/>
             <file name="startup-gcc.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/startup-gcc.c"/>
             <file name="system.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/system.c"/>
-            <file name="ieee802154-packet-utils.hpp" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/ieee802154-packet-utils.hpp"/>
-            <file name="platform-band.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/platform-band.h"/>
-            <file name="rail_config.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/rail_config.h"/>
-            <file name="diag.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/diag.h"/>
-            <file name="soft_source_match_table.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/soft_source_match_table.h"/>
-            <file name="sl_multipan.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/sl_multipan.h"/>
             <file name="logging_rtt.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/efr32/logging_rtt.c"/>
           </folder>
           <folder name="include">
@@ -1711,8 +1782,8 @@
           </folder>
           <folder name="rtos">
             <folder name="rtos-wrappers">
-              <file name="backbone_router_ftd_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/backbone_router_ftd_wrapper.c"/>
               <file name="backbone_router_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/backbone_router_wrapper.c"/>
+              <file name="backbone_router_ftd_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/backbone_router_ftd_wrapper.c"/>
               <file name="ble_secure_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/ble_secure_wrapper.c"/>
               <file name="border_agent_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/border_agent_wrapper.c"/>
               <file name="border_router_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/border_router_wrapper.c"/>
@@ -1726,12 +1797,12 @@
               <file name="commissioner_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/commissioner_wrapper.c"/>
               <file name="config_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/config_wrapper.c"/>
               <file name="crypto_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/crypto_wrapper.c"/>
-              <file name="dataset_ftd_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/dataset_ftd_wrapper.c"/>
               <file name="dataset_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/dataset_wrapper.c"/>
+              <file name="dataset_ftd_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/dataset_ftd_wrapper.c"/>
               <file name="dataset_updater_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/dataset_updater_wrapper.c"/>
               <file name="diag_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/diag_wrapper.c"/>
-              <file name="dns_client_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/dns_client_wrapper.c"/>
               <file name="dns_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/dns_wrapper.c"/>
+              <file name="dns_client_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/dns_client_wrapper.c"/>
               <file name="dnssd_server_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/dnssd_server_wrapper.c"/>
               <file name="error_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/error_wrapper.c"/>
               <file name="heap_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/heap_wrapper.c"/>
@@ -1741,17 +1812,18 @@
               <file name="ip6_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/ip6_wrapper.c"/>
               <file name="jam_detection_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/jam_detection_wrapper.c"/>
               <file name="joiner_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/joiner_wrapper.c"/>
+              <file name="link_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/link_wrapper.c"/>
               <file name="link_metrics_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/link_metrics_wrapper.c"/>
               <file name="link_raw_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/link_raw_wrapper.c"/>
-              <file name="link_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/link_wrapper.c"/>
               <file name="logging_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/logging_wrapper.c"/>
+              <file name="mdns_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/mdns_wrapper.c"/>
               <file name="mesh_diag_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/mesh_diag_wrapper.c"/>
               <file name="message_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/message_wrapper.c"/>
               <file name="multi_radio_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/multi_radio_wrapper.c"/>
               <file name="nat64_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/nat64_wrapper.c"/>
               <file name="ncp_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/ncp_wrapper.c"/>
-              <file name="netdata_publisher_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/netdata_publisher_wrapper.c"/>
               <file name="netdata_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/netdata_wrapper.c"/>
+              <file name="netdata_publisher_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/netdata_publisher_wrapper.c"/>
               <file name="netdiag_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/netdiag_wrapper.c"/>
               <file name="network_time_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/network_time_wrapper.c"/>
               <file name="ping_sender_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/ping_sender_wrapper.c"/>
@@ -1760,17 +1832,18 @@
               <file name="random_noncrypto_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/random_noncrypto_wrapper.c"/>
               <file name="server_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/server_wrapper.c"/>
               <file name="sntp_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/sntp_wrapper.c"/>
-              <file name="srp_client_buffers_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/srp_client_buffers_wrapper.c"/>
               <file name="srp_client_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/srp_client_wrapper.c"/>
+              <file name="srp_client_buffers_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/srp_client_buffers_wrapper.c"/>
               <file name="srp_server_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/srp_server_wrapper.c"/>
               <file name="tasklet_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/tasklet_wrapper.c"/>
               <file name="tcat_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/tcat_wrapper.c"/>
-              <file name="tcp_ext_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/tcp_ext_wrapper.c"/>
               <file name="tcp_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/tcp_wrapper.c"/>
-              <file name="thread_ftd_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/thread_ftd_wrapper.c"/>
+              <file name="tcp_ext_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/tcp_ext_wrapper.c"/>
               <file name="thread_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/thread_wrapper.c"/>
+              <file name="thread_ftd_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/thread_ftd_wrapper.c"/>
               <file name="trel_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/trel_wrapper.c"/>
               <file name="udp_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/udp_wrapper.c"/>
+              <file name="verhoeff_checksum_wrapper.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/rtos-wrappers/verhoeff_checksum_wrapper.c"/>
             </folder>
             <file name="sl_ot_rtos_adaptation.c" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/sl_ot_rtos_adaptation.c"/>
             <file name="sl_ot_rtos_adaptation.h" linked="false" uri="studio:/sdk/protocol/openthread/platform-abstraction/rtos/sl_ot_rtos_adaptation.h"/>
@@ -1780,7 +1853,7 @@
           <file name="sl_ot_phy_select.h" linked="false" uri="studio:/sdk/protocol/openthread/include/sl_ot_phy_select.h"/>
         </folder>
         <folder name="libs">
-          <file name="libsl_openthread_efr32mg2x_gcc.a" linked="false" uri="studio:/sdk/protocol/openthread/libs/libsl_openthread_efr32mg2x_gcc.a"/>
+          <file name="libsl_openthread_cm33_gcc.a" linked="false" uri="studio:/sdk/protocol/openthread/libs/libsl_openthread_cm33_gcc.a"/>
         </folder>
       </folder>
       <folder name="zigbee">
@@ -2022,11 +2095,9 @@
               </folder>
               <folder name="green-power-translation-table">
                 <file name="green-power-translation-table.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-translation-table/green-power-translation-table.h"/>
-              </folder>
-              <folder name="multirail-demo">
-                <file name="multirail-demo.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/multirail-demo/multirail-demo.c"/>
-                <file name="multirail-demo-cb.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/multirail-demo/multirail-demo-cb.c"/>
-                <file name="multirail-demo.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/multirail-demo/multirail-demo.h"/>
+                <file name="green-power-translation-table.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-translation-table/green-power-translation-table.c"/>
+                <file name="green-power-translation-table-cb.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-translation-table/green-power-translation-table-cb.c"/>
+                <file name="green-power-translation-table-tokens.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/framework/plugin/green-power-translation-table/green-power-translation-table-tokens.h"/>
               </folder>
             </folder>
             <folder name="util">
@@ -2140,17 +2211,8 @@
             </folder>
           </folder>
           <folder name="xncp">
+            <file name="xncp-stubs.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp-stubs.c"/>
             <file name="xncp.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp.h"/>
-            <file name="xncp_cb.c" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp_cb.c"/>
-            <file name="xncp-token.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp-token.h"/>
-            <file name="xncp-sample-custom-ezsp-protocol.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/xncp/xncp-sample-custom-ezsp-protocol.h"/>
-          </folder>
-          <folder name="ncp">
-            <folder name="plugin">
-              <folder name="xncp">
-                <file name="xncp.h" linked="false" uri="studio:/sdk/protocol/zigbee/app/ncp/plugin/xncp/xncp.h"/>
-              </folder>
-            </folder>
           </folder>
         </folder>
         <folder name="build">
@@ -2201,11 +2263,6 @@
                   <file name="libzigbee-source-route.a" linked="false" uri="studio:/sdk/protocol/zigbee/build/gcc/cortex-m33/zigbee-source-route/release_singlenetwork/libzigbee-source-route.a"/>
                 </folder>
               </folder>
-              <folder name="zigbee-xncp">
-                <folder name="release_singlenetwork">
-                  <file name="libzigbee-xncp.a" linked="false" uri="studio:/sdk/protocol/zigbee/build/gcc/cortex-m33/zigbee-xncp/release_singlenetwork/libzigbee-xncp.a"/>
-                </folder>
-              </folder>
               <folder name="ncp-zll-library">
                 <folder name="release_singlenetwork">
                   <file name="libncp-zll-library.a" linked="false" uri="studio:/sdk/protocol/zigbee/build/gcc/cortex-m33/ncp-zll-library/release_singlenetwork/libncp-zll-library.a"/>
@@ -2228,152 +2285,162 @@
   <file name="main.c" linked="false" uri="studio:/project/main.c"/>
   <file name="app.c" linked="false" uri="studio:/project/app.c"/>
   <file name="readme-zigbee_ncp-ot_rcp-uart.html" linked="false" uri="studio:/project/readme-zigbee_ncp-ot_rcp-uart.html"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/Device/SiliconLabs/EFR32MG24/Include"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/common/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/hardware/board/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/bootloader"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/bootloader/api"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/plugin/byte_utilities"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/clock_manager/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/clock_manager/src"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/CMSIS/Core/Include"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/CMSIS/RTOS2/Include"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/hardware/driver/configuration_over_swo/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/cpc/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/driver/debug/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/device_manager/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/device_init/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/emdrv/dmadrv/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/emdrv/dmadrv/inc/s2_signals"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/emdrv/common/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/emlib/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/freertos/cmsis/Include"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/freertos/kernel/include"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/freertos/kernel/portable/GCC/ARM_CM33_NTZ/non_secure"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/emdrv/gpiointerrupt/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/peripheral/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/hfxo_manager/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/interrupt_manager/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/interrupt_manager/inc/arm"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/iostream/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/legacy_hal/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/legacy_hal_wdog/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/security/sl_component/sl_mbedtls_support/config"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/security/sl_component/sl_mbedtls_support/config/preset"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/security/sl_component/sl_mbedtls_support/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/mbedtls/include"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/mbedtls/library"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/memory_manager/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/memory_manager/src"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/mpu/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/hardware/driver/mx25_flash_shutdown/inc/sl_mx25_flash_shutdown_usart"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/emdrv/nvm3/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/openthread/include"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/openthread/platform-abstraction/ncp"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/openthread/platform-abstraction/efr32"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/openthread/include"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/openthread/include/openthread"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/openthread/src/core"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/openthread/src/lib"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/openthread/examples/platforms"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/openthread/third_party/tcplp"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/openthread/src"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/openthread/src/ncp"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/openthread/src/lib/spinel"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/openthread/src/lib/hdlc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/openthread/platform-abstraction/include"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/openthread/platform-abstraction/rtos"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/power_manager/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/printf"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/printf/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/security/sl_component/sl_psa_driver/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/common"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/protocol/ble"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/protocol/ieee802154"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/protocol/wmbus"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/protocol/zwave"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/chip/efr32/efr32xg2x"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/protocol/sidewalk"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/mac"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/mac/rail_mux"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/plugin"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/plugin/coexistence/protocol/ieee802154_uc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/plugin/rail_util_built_in_phys/efr32xg24"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/plugin/coexistence/common"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/plugin/coexistence/hal/efr32"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/include"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/plugin/rail_util_dma"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/plugin/rail_util_ieee802154"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/plugin/pa-conversions"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/plugin/pa-conversions/efr32xg24"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/plugin/rail_util_power_manager_init"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/plugin/rail_util_pti"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/plugin/rail_util_rssi"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/security/sl_component/se_manager/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/security/sl_component/se_manager/src"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/plugin/security_manager"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/third_party/segger/systemview/SEGGER"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/silicon_labs/silabs_core/queue"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/common/toolchain/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/system/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/sleeptimer/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/security/sl_component/sl_protocol_crypto/src"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/token_manager/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/service/udelay/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/platform/emdrv/ustimer/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/af-support"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/groups-server"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/service-function"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/framework"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/debug-print"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/gp"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/internal/inc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/green-power-adapter"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/include"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/util"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/security"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/signature-decode"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/util/zigbee-framework"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/util/serial"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/green-power-client"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/green-power-common"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/green-power-server"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/green-power-translation-table"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/plugin/multirail-demo"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/em260"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/xncp"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/util/ezsp"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/util/security"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/security"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/zigbee"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/util/counters"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/util/silicon_labs/silabs_core"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/core"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/mac"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/internal/src/ipc"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/framework/common"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/app/ncp/plugin/xncp"/>
-  <includePath uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/stack/zll"/>
+  <excludedPath>linker_options/ot-rtos-wrapper-options</excludedPath>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/Device/SiliconLabs/EFR32MG24/Include"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/common/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/hardware/board/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/bootloader"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/bootloader/api"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/plugin/byte_utilities"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/clock_manager/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/clock_manager/src"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/CMSIS/Core/Include"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/CMSIS/RTOS2/Include"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/hardware/driver/configuration_over_swo/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/cpc/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/driver/debug/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/device_manager/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/device_init/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/emdrv/dmadrv/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/emdrv/dmadrv/inc/s2_signals"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/emdrv/common/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/emlib/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/freertos/kernel/include"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/freertos/cmsis/Include"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/freertos/kernel/portable/GCC/ARM_CM33_NTZ/non_secure"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/driver/gpio/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/emdrv/gpiointerrupt/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/peripheral/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/hfxo_manager/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/interrupt_manager/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/interrupt_manager/inc/arm"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/iostream/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/legacy_hal/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/legacy_hal_wdog/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/security/sl_component/sl_mbedtls_support/config"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/security/sl_component/sl_mbedtls_support/config/preset"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/security/sl_component/sl_mbedtls_support/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/mbedtls/include"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/mbedtls/library"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/memory_manager/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/memory_manager/src"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/mpu/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/hardware/driver/mx25_flash_shutdown/inc/sl_mx25_flash_shutdown_usart"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/emdrv/nvm3/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/emdrv/nvm3/config"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/openthread/include"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/openthread/platform-abstraction/ncp"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/openthread/platform-abstraction/efr32"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/openthread/include"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/openthread/include/openthread"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/openthread/src/core"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/openthread/src/lib"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/openthread/examples/platforms"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/openthread/third_party/tcplp"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/openthread/src"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/openthread/src/ncp"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/openthread/src/lib/spinel"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/openthread/src/lib/hdlc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/openthread/src/lib/utils"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/openthread/platform-abstraction/include"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/openthread/platform-abstraction/rtos"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/power_manager/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/printf"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/printf/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/security/sl_component/sl_psa_driver/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/common"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/protocol/ble"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/protocol/ieee802154"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/protocol/wmbus"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/protocol/zwave"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/chip/efr32/efr32xg2x"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/protocol/sidewalk"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/mac"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/mac/rail_mux"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/coexistence/protocol/ieee802154_uc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/rail_util_built_in_phys/efr32xg24"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/coexistence/common"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/coexistence/hal/efr32"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/stack/include"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/rail_util_dma"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/rail_util_ieee802154"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/pa-conversions"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/pa-conversions/efr32xg24"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/rail_util_power_manager_init"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/rail_util_pti"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/rail_util_rssi"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/security/sl_component/se_manager/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/plugin/security_manager"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/third_party/segger/systemview/SEGGER"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/silicon_labs/silabs_core/queue"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/common/toolchain/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/system/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/sleeptimer/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/security/sl_component/sl_protocol_crypto/src"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/security/sl_component/sli_psec_osal/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/token_manager/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/service/udelay/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/platform/emdrv/ustimer/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/plugin/af-support"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/plugin/groups-server"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/service-function"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/stack/framework"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/plugin/debug-print"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/stack/gp"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/stack/internal/inc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/plugin/green-power-adapter"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/include"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/util"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/security"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/signature-decode"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/util/zigbee-framework"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/util/serial"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/plugin/green-power-client"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/plugin/green-power-common"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/plugin/green-power-server"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/plugin/green-power-translation-table"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/em260"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/xncp"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/util/ezsp"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/util/security"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/stack/security"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/stack/zigbee"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/util/counters"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/stack"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/util/silicon_labs/silabs_core"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/stack/core"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/stack/mac"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/stack/internal/src/ipc"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/app/framework/common"/>
+  <includePath uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/stack/zll"/>
   <macroDefinition name="OS_CFG_COMPAT_INIT"/>
   <macroDefinition name="SL_ZIGBEE_CUSTOM_MAC_FILTER_TABLE_SIZE" value="15"/>
   <macroDefinition name="EFR32MG24B210F1536IM48"/>
+  <macroDefinition name="SL_CODE_COMPONENT_SYSTEM" value="system"/>
   <macroDefinition name="SL_APP_PROPERTIES"/>
-  <macroDefinition name="SL_BOARD_NAME" value="&quot;BRD4001A&quot;"/>
-  <macroDefinition name="SL_BOARD_REV" value="&quot;A02&quot;"/>
+  <macroDefinition name="SL_BOARD_NAME" value="&quot;BRD4002A&quot;"/>
+  <macroDefinition name="SL_BOARD_REV" value="&quot;A07&quot;"/>
   <macroDefinition name="HARDWARE_BOARD_DEFAULT_RF_BAND_2400"/>
   <macroDefinition name="HARDWARE_BOARD_SUPPORTS_1_RF_BAND"/>
   <macroDefinition name="HARDWARE_BOARD_SUPPORTS_RF_BAND_2400"/>
   <macroDefinition name="HFXO_FREQ" value="39000000"/>
   <macroDefinition name="SL_BOARD_NAME" value="&quot;BRD4186C&quot;"/>
   <macroDefinition name="SL_BOARD_REV" value="&quot;A01&quot;"/>
+  <macroDefinition name="SL_CODE_COMPONENT_BYTE_UTILITIES" value="byte_utilities"/>
+  <macroDefinition name="SL_CODE_COMPONENT_CLOCK_MANAGER" value="clock_manager"/>
   <macroDefinition name="configNUM_SDK_THREAD_LOCAL_STORAGE_POINTERS" value="2"/>
   <macroDefinition name="SL_COMPONENT_CATALOG_PRESENT"/>
-  <macroDefinition name="SL_CODE_COMPONENT_PERIPHERAL_SYSRTC" value="hal_sysrtc"/>
+  <macroDefinition name="SL_CODE_COMPONENT_DEVICE_PERIPHERAL" value="device_peripheral"/>
+  <macroDefinition name="SL_CODE_COMPONENT_DMADRV" value="dmadrv"/>
+  <macroDefinition name="SL_CODE_COMPONENT_FREERTOS_KERNEL" value="freertos_kernel"/>
+  <macroDefinition name="SL_CODE_COMPONENT_HAL_COMMON" value="hal_common"/>
+  <macroDefinition name="SL_CODE_COMPONENT_HAL_GPIO" value="hal_gpio"/>
+  <macroDefinition name="SL_CODE_COMPONENT_HAL_SYSRTC" value="hal_sysrtc"/>
   <macroDefinition name="CMSIS_NVIC_VIRTUAL"/>
   <macroDefinition name="CMSIS_NVIC_VIRTUAL_HEADER_FILE" value="&quot;cmsis_nvic_virtual.h&quot;"/>
-  <macroDefinition name="SEGGER_RTT_ALIGNMENT" value="1024"/>
+  <macroDefinition name="SL_CODE_COMPONENT_LEGACY_HAL" value="legacy_hal"/>
   <macroDefinition name="CORTEXM3"/>
   <macroDefinition name="CORTEXM3_EFM32_MICRO"/>
   <macroDefinition name="CORTEXM3_EFR32"/>
@@ -2381,7 +2448,6 @@
   <macroDefinition name="PLATFORM_HEADER" value="&quot;platform-header.h&quot;"/>
   <macroDefinition name="SL_LEGACY_HAL_ENABLE_WATCHDOG" value="1"/>
   <macroDefinition name="MBEDTLS_CONFIG_FILE" value="&lt;sl_mbedtls_config.h>"/>
-  <macroDefinition name="SL_MEMORY_POOL_LIGHT"/>
   <macroDefinition name="OPENTHREAD_CONFIG_ENABLE_BUILTIN_MBEDTLS" value="0"/>
   <macroDefinition name="OPENTHREAD_CONFIG_NCP_CPC_ENABLE" value="1"/>
   <macroDefinition name="OPENTHREAD_CONFIG_NCP_CPC_TX_CHUNK_SIZE" value="2048"/>
@@ -2404,44 +2470,50 @@
   <macroDefinition name="SL_CODE_COMPONENT_POWER_MANAGER" value="power_manager"/>
   <macroDefinition name="MBEDTLS_PSA_CRYPTO_CONFIG_FILE" value="&lt;psa_crypto_config.h>"/>
   <macroDefinition name="SL_RAIL_LIB_MULTIPROTOCOL_SUPPORT" value="1"/>
+  <macroDefinition name="SL_CODE_COMPONENT_RAIL_MUX_15_4" value="rail_mux_ieee802154_mac"/>
+  <macroDefinition name="SL_CODE_COMPONENT_RAIL_UTIL_IEEE802154_PHY_SELECT" value="rail_util_ieee802154_phy_select"/>
+  <macroDefinition name="SL_CODE_COMPONENT_RAIL_UTIL_IEEE802154_STACK_EVENT" value="rail_util_ieee802154_stack_event"/>
   <macroDefinition name="SL_RAIL_UTIL_PA_CONFIG_HEADER" value="&lt;sl_rail_util_pa_config.h>"/>
+  <macroDefinition name="SL_CODE_COMPONENT_SE_MANAGER" value="se_manager"/>
   <macroDefinition name="RTT_USE_ASM" value="0"/>
   <macroDefinition name="SEGGER_RTT_SECTION" value="&quot;SEGGER_RTT&quot;"/>
   <macroDefinition name="CIRCULAR_QUEUE_USE_LOCAL_CONFIG_HEADER" value="1"/>
   <macroDefinition name="SL_CODE_COMPONENT_CORE" value="core"/>
   <macroDefinition name="SL_CODE_COMPONENT_SLEEPTIMER" value="sleeptimer"/>
   <macroDefinition name="SLI_RADIOAES_REQUIRES_MASKING"/>
+  <macroDefinition name="SL_CODE_COMPONENT_PSEC_OSAL" value="psec_osal"/>
   <macroDefinition name="CUSTOM_TOKEN_HEADER" value="&quot;sl_token_manager_af_token_header.h&quot;"/>
+  <macroDefinition name="SL_CODE_COMPONENT_TOKEN_MANAGER" value="token_manager"/>
   <macroDefinition name="USE_NVM3"/>
   <macroDefinition name="EZSP_CPC"/>
   <macroDefinition name="SL_ZIGBEE_AF_NCP" value="1"/>
+  <macroDefinition name="SL_CODE_COMPONENT_BUFFER_MANAGER" value="buffer_manager"/>
+  <macroDefinition name="SL_CODE_COMPONENT_IEEE_802_15_4_MAC" value="ieee_802_15_4_mac"/>
+  <macroDefinition name="SL_CODE_COMPONENT_ZIGBEE_STACK" value="zigbee_stack"/>
   <macroDefinition name="SL_ZIGBEE_MULTI_NETWORK_STRIPPED"/>
   <macroDefinition name="SL_ZIGBEE_PHY_SELECT_STACK_SUPPORT" value="1"/>
   <macroDefinition name="SL_ZIGBEE_STACK_COMPLIANCE_REVISION" value="22"/>
   <macroDefinition name="STACK_CORE_HEADER" value="&quot;stack/core/sl_zigbee_stack.h&quot;"/>
   <macroDefinition name="STACK_HEADER" value="&quot;stack/include/sl_zigbee.h&quot;"/>
   <macroDefinition name="STACK_TYPES_HEADER" value="&quot;stack/include/sl_zigbee_types.h&quot;"/>
-  <macroDefinition name="UC_BUILD"/>
   <libraryFile name="stdc++"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/platform/emdrv/nvm3/lib/libnvm3_CM33_gcc.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/openthread/libs/libsl_openthread_efr32mg2x_gcc.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/platform/radio/rail_lib/autogen/librail_release/librail_multiprotocol_efr32xg24_gcc_release.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/protocol/openthread/libs/libsl_openthread_cm33_gcc.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/platform/radio/rail_lib/autogen/librail_release/librail_multiprotocol_efr32xg24_gcc_release.a"/>
   <libraryFile name="gcc"/>
   <libraryFile name="c"/>
   <libraryFile name="m"/>
   <libraryFile name="nosys"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/build/gcc/cortex-m33/zigbee-debug-basic/release_singlenetwork/libzigbee-debug-basic.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/build/gcc/cortex-m33/ncp-gp-library/release_singlenetwork/libncp-gp-library.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/build/gcc/cortex-m33/zigbee-gp/release_singlenetwork/libzigbee-gp.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/build/gcc/cortex-m33/zigbee-ncp-cpc/release_singlenetwork/libzigbee-ncp-cpc.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/build/gcc/cortex-m33/ncp-pro-library/release_singlenetwork/libncp-pro-library.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/build/gcc/cortex-m33/zigbee-pro-stack-rail-mux/release_singlenetwork/libzigbee-pro-stack-rail-mux.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/build/gcc/cortex-m33/zigbee-r22-support/release_singlenetwork/libzigbee-r22-support.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/build/gcc/cortex-m33/ncp-source-route-library/release_singlenetwork/libncp-source-route-library.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/build/gcc/cortex-m33/zigbee-source-route/release_singlenetwork/libzigbee-source-route.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/build/gcc/cortex-m33/zigbee-xncp/release_singlenetwork/libzigbee-xncp.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/build/gcc/cortex-m33/ncp-zll-library/release_singlenetwork/libncp-zll-library.a"/>
-  <libraryFile uri="studio:/project/simplicity_sdk_2024.6.1/protocol/zigbee/build/gcc/cortex-m33/zigbee-zll/release_singlenetwork/libzigbee-zll.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/build/gcc/cortex-m33/zigbee-debug-basic/release_singlenetwork/libzigbee-debug-basic.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/build/gcc/cortex-m33/ncp-gp-library/release_singlenetwork/libncp-gp-library.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/build/gcc/cortex-m33/zigbee-gp/release_singlenetwork/libzigbee-gp.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/build/gcc/cortex-m33/zigbee-ncp-cpc/release_singlenetwork/libzigbee-ncp-cpc.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/build/gcc/cortex-m33/ncp-pro-library/release_singlenetwork/libncp-pro-library.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/build/gcc/cortex-m33/zigbee-pro-stack-rail-mux/release_singlenetwork/libzigbee-pro-stack-rail-mux.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/build/gcc/cortex-m33/zigbee-r22-support/release_singlenetwork/libzigbee-r22-support.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/build/gcc/cortex-m33/ncp-source-route-library/release_singlenetwork/libncp-source-route-library.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/build/gcc/cortex-m33/zigbee-source-route/release_singlenetwork/libzigbee-source-route.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/build/gcc/cortex-m33/ncp-zll-library/release_singlenetwork/libncp-zll-library.a"/>
+  <libraryFile uri="studio:/project/simplicity_sdk_2024.12.0/protocol/zigbee/build/gcc/cortex-m33/zigbee-zll/release_singlenetwork/libzigbee-zll.a"/>
   <toolOption toolId="toolOption.uc.toolchain" optionId="toolOption.uc.toolchain.cpu" value="cortex-m33"/>
   <toolOption toolId="toolOption.uc.toolchain" optionId="toolOption.uc.toolchain.fpu" value="fpv5-sp"/>
   <toolOption toolId="toolOption.uc.toolchain" optionId="toolOption.uc.toolchain.float_abi" value="hard"/>
@@ -2473,6 +2545,7 @@
   <toolOption toolId="toolOption.uc.compiler" optionId="toolOption.uc.compiler.warnings.pedantic" value="false"/>
   <toolOption toolId="toolOption.uc.compiler" optionId="toolOption.uc.compiler.warnings.are_errors" value="false"/>
   <toolOption toolId="toolOption.uc.compiler" optionId="toolOption.uc.compiler.optimization" value="size"/>
+  <toolOption toolId="toolOption.uc.compiler" optionId="toolOption.uc.compiler.debug_level" value="default"/>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.base" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.floatingpoint.type" value="floatingpoint.type.hard"/>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.base" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.floatingpoint.enable" value="true"/>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.base" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.floatingpoint.type" value="floatingpoint.type.hard"/>
@@ -2483,6 +2556,7 @@
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.base" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.floatingpoint.type" value="floatingpoint.type.hard"/>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.base" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.floatingpoint.enable" value="true"/>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.base" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.floatingpoint.enable" value="true"/>
+  <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.exe" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.debug.level" value="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.debug.level.default"/>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.base" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.preinclude">
     <toolListOption value="sl_openthread_coex_config.h"/>
     <toolListOption value="sl_openthread_rtos_config.h"/>
@@ -2519,12 +2593,12 @@
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.base" optionId="gnu.c.compiler.option.warnings.pedantic" value="false"/>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.compiler.base" optionId="gnu.cpp.compiler.option.warnings.pedantic" value="false"/>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.base" optionId="com.silabs.gnu.c.link.option.ldflags">
-    <toolListOption value="@${workspace_loc:/${ProjName}/linker_options/ot-rtos-wrapper-options}"/>
+    <toolListOption value="@&quot;${workspace_loc:/${ProjName}/linker_options/ot-rtos-wrapper-options}&quot;"/>
   </toolOption>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.base" optionId="com.silabs.gnu.cpp.link.option.flags">
-    <toolListOption value="@${workspace_loc:/${ProjName}/linker_options/ot-rtos-wrapper-options}"/>
+    <toolListOption value="@&quot;${workspace_loc:/${ProjName}/linker_options/ot-rtos-wrapper-options}&quot;"/>
   </toolOption>
-  <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.exe" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.script" value="${workspace_loc:/${ProjName}/autogen/linkerfile.ld}"/>
+  <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.exe" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.script" value="&quot;${workspace_loc:/${ProjName}/autogen/linkerfile.ld}&quot;"/>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.exe" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.usescript" value="true"/>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.base" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.clibs" value="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.nanospec"/>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.base" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.clibs" value="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.nanospec"/>
@@ -2535,27 +2609,26 @@
     <toolListOption value="-mcmse"/>
     <toolListOption value="-Werror=unused-function"/>
     <toolListOption value="-Werror=unused-label"/>
-    <toolListOption value="-Werror=unused-parameter"/>
     <toolListOption value="-Werror=unused-variable"/>
     <toolListOption value="-Wno-unused-parameter"/>
     <toolListOption value="-Wno-missing-field-initializers"/>
     <toolListOption value="-Wno-missing-braces"/>
     <toolListOption value="-fno-builtin-printf"/>
     <toolListOption value="-fno-builtin-sprintf"/>
+    <toolListOption value="-fno-lto"/>
     <toolListOption value="--specs=nano.specs"/>
-    <toolListOption value="-g"/>
   </toolOption>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.base" optionId="com.silabs.gnu.c.compiler.option.misc.otherlist">
     <toolListOption value="-mcmse"/>
     <toolListOption value="-Werror=unused-function"/>
     <toolListOption value="-Werror=unused-label"/>
-    <toolListOption value="-Werror=unused-parameter"/>
     <toolListOption value="-Werror=unused-variable"/>
     <toolListOption value="-Wno-unused-parameter"/>
     <toolListOption value="-Wno-missing-field-initializers"/>
     <toolListOption value="-Wno-missing-braces"/>
     <toolListOption value="-fno-builtin-printf"/>
     <toolListOption value="-fno-builtin-sprintf"/>
+    <toolListOption value="-fno-lto"/>
     <toolListOption value="--specs=nano.specs"/>
     <toolListOption value="-c"/>
     <toolListOption value="-fmessage-length=0"/>
@@ -2564,11 +2637,11 @@
     <toolListOption value="-mcmse"/>
     <toolListOption value="-Werror=unused-function"/>
     <toolListOption value="-Werror=unused-label"/>
-    <toolListOption value="-Werror=unused-parameter"/>
     <toolListOption value="-Werror=unused-variable"/>
     <toolListOption value="-Wno-unused-parameter"/>
     <toolListOption value="-Wno-missing-field-initializers"/>
     <toolListOption value="-Wno-missing-braces"/>
+    <toolListOption value="-fno-lto"/>
     <toolListOption value="--specs=nano.specs"/>
     <toolListOption value="-c"/>
     <toolListOption value="-fmessage-length=0"/>
@@ -2581,24 +2654,27 @@
   </toolOption>
   <toolOption toolId="makefile.arm.gcc.linker" optionId="misc">
     <toolListOption value="-Wl,--wrap=_free_r -Wl,--wrap=_malloc_r -Wl,--wrap=_calloc_r -Wl,--wrap=_realloc_r"/>
-    <toolListOption value="-Wl,--gc-sections"/>
     <toolListOption value="-Wl,--no-warn-rwx-segments"/>
+    <toolListOption value="-fno-lto"/>
+    <toolListOption value="-Wl,--gc-sections"/>
   </toolOption>
   <toolOption toolId="makefile.host.gcc.linker" optionId="misc">
     <toolListOption value="-Wl,--wrap=_free_r -Wl,--wrap=_malloc_r -Wl,--wrap=_calloc_r -Wl,--wrap=_realloc_r"/>
+    <toolListOption value="-Wl,--no-warn-rwx-segments"/>
   </toolOption>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.base" optionId="com.silabs.gnu.c.link.option.ldflags">
     <toolListOption value="-Wl,--wrap=_free_r -Wl,--wrap=_malloc_r -Wl,--wrap=_calloc_r -Wl,--wrap=_realloc_r"/>
     <toolListOption value="-Wl,--no-warn-rwx-segments"/>
+    <toolListOption value="-fno-lto"/>
   </toolOption>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.base" optionId="com.silabs.gnu.cpp.link.option.flags">
     <toolListOption value="-Wl,--wrap=_free_r -Wl,--wrap=_malloc_r -Wl,--wrap=_calloc_r -Wl,--wrap=_realloc_r"/>
     <toolListOption value="-Wl,--no-warn-rwx-segments"/>
+    <toolListOption value="-fno-lto"/>
   </toolOption>
   <toolOption toolId="makefile.host.gcc.compiler" optionId="misc">
     <toolListOption value="-Werror=unused-function"/>
     <toolListOption value="-Werror=unused-label"/>
-    <toolListOption value="-Werror=unused-parameter"/>
     <toolListOption value="-Werror=unused-variable"/>
     <toolListOption value="-Wno-unused-parameter"/>
     <toolListOption value="-Wno-missing-field-initializers"/>

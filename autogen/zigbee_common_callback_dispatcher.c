@@ -29,6 +29,7 @@ void sli_zigbee_af_event_init(void)
 void sli_zigbee_af_local_data_init(void)
 {
   sl_zigbee_af_green_power_client_init_cb(SL_ZIGBEE_INIT_LEVEL_LOCAL_DATA);
+  sl_zigbee_af_green_power_translation_table_init_cb(SL_ZIGBEE_INIT_LEVEL_LOCAL_DATA);
 }
 
 void sli_zigbee_af_init_done(void)
