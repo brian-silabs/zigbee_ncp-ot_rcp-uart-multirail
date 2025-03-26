@@ -37,6 +37,8 @@ component:
 - {id: brd4186c}
 - instance: [vcom]
   id: cpc_secondary_driver_uart_usart
+- {id: iostream_retarget_stdio}
+- {id: iostream_rtt}
 - {id: ot_ncp_cpc}
 - {id: ot_rtt_log}
 - {id: ot_stack_rcp}

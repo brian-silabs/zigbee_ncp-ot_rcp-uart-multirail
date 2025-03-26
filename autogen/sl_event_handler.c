@@ -25,6 +25,7 @@
 #include "sl_debug_swo.h"
 #include "gpiointerrupt.h"
 #include "sl_iostream_debug.h"
+#include "sl_iostream_rtt.h"
 #include "hal.h"
 #include "sl_mbedtls.h"
 #include "sl_mpu.h"
@@ -105,5 +106,6 @@ void sl_internal_app_init(void)
 void sl_iostream_init_instances(void)
 {
   sl_iostream_debug_init();
+  sl_iostream_rtt_init();
 }
 

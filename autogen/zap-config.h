@@ -46,13 +46,13 @@
 // This is an array of EmberAfAttributeMetadata structures.
 #define GENERATED_ATTRIBUTES { \
   { 0x0010, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x14  } }, /* 0 Cluster: Green Power, Attribute: gpp max proxy table entries, Side: client*/ \
-		  { 0x0011, ZCL_LONG_OCTET_STRING_ATTRIBUTE_TYPE, 253, (ATTRIBUTE_MASK_CLIENT), { NULL } }, /* 1 Cluster: Green Power, Attribute: proxy table, Side: client*/ \
+		  { 0x0011, ZCL_LONG_OCTET_STRING_ATTRIBUTE_TYPE, 255, (ATTRIBUTE_MASK_CLIENT), { NULL } }, /* 1 Cluster: Green Power, Attribute: proxy table, Side: client*/ \
 	  { 0x0016, ZCL_BITMAP24_ATTRIBUTE_TYPE, 3, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[22]) } }, /* 2 Cluster: Green Power, Attribute: gpp functionality, Side: client*/ \
 	  { 0x0017, ZCL_BITMAP24_ATTRIBUTE_TYPE, 3, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[25]) } }, /* 3 Cluster: Green Power, Attribute: gpp active functionality, Side: client*/ \
 	  { 0x0022, ZCL_SECURITY_KEY_ATTRIBUTE_TYPE, 16, (ATTRIBUTE_MASK_WRITABLE| ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[28]) } }, /* 4 Cluster: Green Power, Attribute: gp link key, Side: client*/ \
 	  { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0001  } }, /* 5 Cluster: Green Power, Attribute: cluster revision, Side: client*/ \
 		  { 0x0000, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (0x00), { (uint8_t*)0x05  } }, /* 6 Cluster: Green Power, Attribute: gps max sink table entries, Side: server*/ \
-		  { 0x0001, ZCL_LONG_OCTET_STRING_ATTRIBUTE_TYPE, 253, (0x00), { NULL } }, /* 7 Cluster: Green Power, Attribute: sink table, Side: server*/ \
+		  { 0x0001, ZCL_LONG_OCTET_STRING_ATTRIBUTE_TYPE, 255, (0x00), { NULL } }, /* 7 Cluster: Green Power, Attribute: sink table, Side: server*/ \
 	  { 0x0002, ZCL_BITMAP8_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_WRITABLE), { (uint8_t*)0x01  } }, /* 8 Cluster: Green Power, Attribute: gps communication mode, Side: server*/ \
 		  { 0x0003, ZCL_BITMAP8_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_WRITABLE), { (uint8_t*)0x02  } }, /* 9 Cluster: Green Power, Attribute: gps commissioning exit mode, Side: server*/ \
 		  { 0x0004, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_WRITABLE), { (uint8_t*)0x00FF  } }, /* 10 Cluster: Green Power, Attribute: gps commissioning window, Side: server*/ \
@@ -71,8 +71,8 @@
 	
 // This is an array of EmberAfCluster structures.
 #define GENERATED_CLUSTERS { \
-  { 0x0021, (EmberAfAttributeMetadata*)&(generatedAttributes[0]), 6, 278, CLUSTER_MASK_CLIENT, NULL }, /* 0, Endpoint Id: 242, Cluster: Green Power, Side: client*/ \
-	  { 0x0021, (EmberAfAttributeMetadata*)&(generatedAttributes[6]), 12, 300, CLUSTER_MASK_SERVER, NULL } /* 1, Endpoint Id: 242, Cluster: Green Power, Side: server*/ \
+  { 0x0021, (EmberAfAttributeMetadata*)&(generatedAttributes[0]), 6, 280, CLUSTER_MASK_CLIENT, NULL }, /* 0, Endpoint Id: 242, Cluster: Green Power, Side: client*/ \
+	  { 0x0021, (EmberAfAttributeMetadata*)&(generatedAttributes[6]), 12, 302, CLUSTER_MASK_SERVER, NULL } /* 1, Endpoint Id: 242, Cluster: Green Power, Side: server*/ \
 	 }
 
  
@@ -80,16 +80,16 @@
 
 // This is an array of EmberAfEndpointType structures.
 #define GENERATED_ENDPOINT_TYPES { \
-  { ((EmberAfCluster*)&(generatedClusters[0])), 2, 578 }, \
+  { ((EmberAfCluster*)&(generatedClusters[0])), 2, 582 }, \
 	 } 
 // Largest attribute size is needed for various buffers
-#define ATTRIBUTE_LARGEST (253)
+#define ATTRIBUTE_LARGEST (255)
 
 // Total size of singleton attributes
 #define ATTRIBUTE_SINGLETONS_SIZE (0)
 
 // Total size of attribute storage
-#define ATTRIBUTE_MAX_SIZE (578)
+#define ATTRIBUTE_MAX_SIZE (582)
 
 // Number of fixed endpoints	
 #define FIXED_ENDPOINT_COUNT (1)

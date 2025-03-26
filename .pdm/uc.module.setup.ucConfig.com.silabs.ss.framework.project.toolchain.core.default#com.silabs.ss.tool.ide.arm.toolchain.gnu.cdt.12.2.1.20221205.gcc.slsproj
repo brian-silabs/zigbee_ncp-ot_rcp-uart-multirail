@@ -10,10 +10,14 @@
     <file name="sl_token_manager_config.h" generated="true" linked="false"/>
     <file name="sl_custom_token_header.h" generated="true" linked="false"/>
     <file name="sl_custom_manufacturing_token_header.h" generated="true" linked="false"/>
+    <file name="af-support-config.h" generated="true" linked="false"/>
     <file name="zigbee_sleep_config.h" generated="true" linked="false"/>
     <file name="zigbee_rtos_task_config.h" generated="true" linked="false"/>
     <file name="sl_zigbee_debug_print_config.h" generated="true" linked="false"/>
     <file name="sl_zigbee_green_power_config.h" generated="true" linked="false"/>
+    <file name="green-power-client-config.h" generated="true" linked="false"/>
+    <file name="zcl_config_gp_combo.zap" generated="true" linked="false"/>
+    <file name="green-power-server-config.h" generated="true" linked="false"/>
     <file name="sl_zigbee_pro_stack_config.h" generated="true" linked="false"/>
     <file name="sl_zigbee_security_link_keys_config.h" generated="true" linked="false"/>
     <file name="sl_zigbee_source_route_config.h" generated="true" linked="false"/>
@@ -46,6 +50,7 @@
     <file name="sl_cpc_kernel_config.h" generated="true" linked="false"/>
     <file name="dmadrv_config.h" generated="true" linked="false"/>
     <file name="ustimer_config.h" generated="true" linked="false"/>
+    <file name="green-power-adapter-config.h" generated="true" linked="false"/>
     <file name="sl_rail_util_rssi_config.h" generated="true" linked="false"/>
     <file name="sl_rail_util_ieee802154_fast_channel_switching_config.h" generated="true" linked="false"/>
     <file name="os_cfg.h" generated="true" linked="false"/>
@@ -59,11 +64,6 @@
     <file name="emlib_core_debug_config.h" generated="true" linked="false"/>
     <file name="sl_mbedtls_config.h" generated="true" linked="false"/>
     <file name="sl_mbedtls_device_config.h" generated="true" linked="false"/>
-    <file name="zcl_config_gp_combo.zap" generated="true" linked="false"/>
-    <file name="green-power-client-config.h" generated="true" linked="false"/>
-    <file name="green-power-server-config.h" generated="true" linked="false"/>
-    <file name="af-support-config.h" generated="true" linked="false"/>
-    <file name="green-power-adapter-config.h" generated="true" linked="false"/>
   </folder>
   <includePath uri="studio:/project/config"/>
 </project>

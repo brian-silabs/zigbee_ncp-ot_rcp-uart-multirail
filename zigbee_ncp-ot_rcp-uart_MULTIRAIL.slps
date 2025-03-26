@@ -13,5 +13,6 @@
     <properties key="universalConfig.projectTypeIds" value="com.silabs.ss.framework.ide.project.core.cdtMbsProjectType"/>
     <properties key="projectCommon.importModeId" value="COPY"/>
     <properties key="universalConfig.compSelProjInstanceId" value="1724162481597"/>
+    <properties key="projectCommon.overwriteCopiedSources" value="false"/>
   </descriptors>
 </model:MDescriptors>
