@@ -679,7 +679,7 @@
 							<tool id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.base.451287921" name="GNU ARM C++ Linker" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.base">
 								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.dependencies.projects.1804722280" name="Project Dependencies" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.dependencies.projects" useByScannerDiscovery="false"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.userobjs.448430705" name="Other objects" superClass="gnu.cpp.link.option.userobjs" useByScannerDiscovery="false" valueType="userObjs">
-									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/gecko_sdk_4.4.3/platform/emdrv/nvm3/lib/libnvm3_CM33_gcc.a}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/libnvm3_CM33_gcc_new.a}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/gecko_sdk_4.4.3/protocol/openthread/libs/libsl_openthread_efr32mg2x_gcc.a}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/gecko_sdk_4.4.3/platform/radio/rail_lib/autogen/librail_release/librail_multiprotocol_efr32xg24_gcc_release.a}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/gecko_sdk_4.4.3/protocol/zigbee/build/gcc/cortex-m33/zigbee-debug-basic/release_singlenetwork/libzigbee-debug-basic.a}"/>
