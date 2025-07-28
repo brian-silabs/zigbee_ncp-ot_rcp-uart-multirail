@@ -2,18 +2,18 @@
 #define SL_CPC_DRV_UART_SECONDARY_CONFIG_H
 
 
-#include "sl_cpc_drv_uart_usart_vcom_config.h"
+#include "sl_cpc_drv_uart_eusart_vcom_config.h"
 
-#define SL_CPC_DRV_PERIPH_IS_USART
+#define SL_CPC_DRV_PERIPH_IS_EUSART
 #if defined(SL_CPC_DRV_PERIPH_IS_EUSART) && defined(EUART_COUNT) && (EUART_COUNT > 0) 
 // EUART peripheral variant
 #define SL_CPC_DRV_PERIPH_NAME  EUART
 #else
-#define SL_CPC_DRV_PERIPH_NAME  USART
+#define SL_CPC_DRV_PERIPH_NAME  EUSART
 #endif
 
-#define usartHwFlowControlNone_D         0
-#define usartHwFlowControlCtsAndRts_D    1
+#define eusartHwFlowControlNone_D         0
+#define eusartHwFlowControlCtsAndRts_D    1
 
 #define CAT(a,...) CAT_IMPL(a, __VA_ARGS__)
 #define CAT_IMPL(a,...) a ## __VA_ARGS__
@@ -24,13 +24,13 @@
 #define SL_CPC_DRV_UART_BAUDRATE                     SL_CPC_DRV_UART_VCOM_BAUDRATE
 
 #if !defined(SL_CPC_DRV_UART_VCOM_FLOW_CONTROL_TYPE)
-#define SL_CPC_DRV_UART_FLOW_CONTROL_TYPE usartHwFlowControlNone_D
+#define SL_CPC_DRV_UART_FLOW_CONTROL_TYPE eusartHwFlowControlNone_D
 #else
 #define FC_USER_VAL CAT(SL_CPC_DRV_UART_VCOM_FLOW_CONTROL_TYPE, _D)
 #define SL_CPC_DRV_UART_FLOW_CONTROL_TYPE  FC_USER_VAL
 #endif
 
-#if ((SL_CPC_DRV_UART_FLOW_CONTROL_TYPE != usartHwFlowControlNone_D) && (SL_CPC_DRV_UART_FLOW_CONTROL_TYPE != usartHwFlowControlCtsAndRts_D))
+#if ((SL_CPC_DRV_UART_FLOW_CONTROL_TYPE != eusartHwFlowControlNone_D) && (SL_CPC_DRV_UART_FLOW_CONTROL_TYPE != eusartHwFlowControlCtsAndRts_D))
 #error Invalid Flow control value
 #endif
 

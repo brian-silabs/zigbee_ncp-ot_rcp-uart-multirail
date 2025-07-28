@@ -36,7 +36,7 @@
 #include "sli_cpc.h"
 
 #include "sli_cpc_instance.h"
-#include "sl_cpc_drv_uart_usart_vcom_config.h"
+#include "sl_cpc_drv_uart_eusart_vcom_config.h"
 
 
 #if !defined(SL_CPC_ENDPOINT_DEFAULT_INSTANCE)

@@ -33,10 +33,12 @@
 #ifndef SL_MEMORY_MANAGER_REGION_CONFIG_H
 #define SL_MEMORY_MANAGER_REGION_CONFIG_H
 
+#include "sl_component_catalog.h"
+
 // <h> Memory configuration
 
 // <o SL_STACK_SIZE> Stack size for the application.
-// <i> Default: 4096
+// <i> Default: 1024
 // <i> The stack size configured here will be used by the stack that the
 // <i> application uses when coming out of a reset.
 #ifndef SL_STACK_SIZE

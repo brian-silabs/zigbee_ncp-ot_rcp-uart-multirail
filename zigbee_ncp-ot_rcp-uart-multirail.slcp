@@ -20,15 +20,15 @@ filter:
   value: [Advanced]
 - name: Wireless Technology
   value: [Thread, Zigbee]
-package: Zigbee
+package: multiprotocol
 quality: production
 readme:
 - {path: readme-zigbee_ncp-ot_rcp-uart.html}
 - {path: readme-zigbee_ncp-ot_rcp-uart.html}
 source:
-- {path: main.c}
 - {path: app.c}
-sdk: {id: simplicity_sdk, version: 2024.12.0}
+tag: ['hardware:device:ram:96']
+sdk: {id: simplicity_sdk, version: 2025.6.1}
 toolchain_settings: []
 component:
 - {id: EFR32MG24B210F1536IM48}
@@ -36,14 +36,14 @@ component:
 - {id: brd4002a}
 - {id: brd4186c}
 - {id: clock_manager}
-- instance: [vcom]
-  id: cpc_secondary_driver_uart_usart
+- {id: common_token_manager}
+- {id: cpc_secondary_recommended_uart_interface}
 - {id: ot_ncp_cpc}
 - {id: ot_rtt_log}
 - {id: ot_stack_rcp}
 - {id: rail_mux}
 - {id: rail_util_pti}
-- {id: token_manager}
+- {id: sl_main}
 - {id: zigbee_af_support}
 - {id: zigbee_debug_basic}
 - {id: zigbee_debug_print}

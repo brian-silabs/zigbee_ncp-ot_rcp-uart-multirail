@@ -1,5 +1,6 @@
 {
-  "featureLevel": 89,
+  "fileFormat": 2,
+  "featureLevel": 107,
   "creator": "zap",
   "keyValuePairs": [
     {
@@ -18,23 +19,46 @@
   "package": [
     {
       "pathRelativity": "relativeToZap",
-      "path": "../../../../../framework/gen-template/gen-templates.json",
-      "type": "gen-templates-json",
-      "category": "zigbee",
-      "version": "zigbee-v0"
-    },
-    {
-      "pathRelativity": "relativeToZap",
-      "path": "../../../../../../../../app/zcl/zcl-zap.json",
+      "path": "../../../../../../../Users/brrodrig/SimplicityStudio/SDKs/simplicity_sdk_3/app/zcl/zcl-zap.json",
       "type": "zcl-properties",
       "category": "zigbee",
       "version": 1,
       "description": "Zigbee Silabs ZCL data"
+    },
+    {
+      "pathRelativity": "relativeToZap",
+      "path": "../../../../../../../Users/brrodrig/SimplicityStudio/SDKs/simplicity_sdk_3/protocol/zigbee/app/framework/gen-template/gen-templates.json",
+      "type": "gen-templates-json",
+      "category": "zigbee",
+      "version": "zigbee-v0"
     }
   ],
   "endpointTypes": [
     {
+      "id": 1,
       "name": "GreenPower",
+      "deviceTypeRef": {
+        "code": 102,
+        "profileId": 41440,
+        "label": "GP-combo-basic",
+        "name": "GP-combo-basic",
+        "deviceTypeOrder": 0
+      },
+      "deviceTypes": [
+        {
+          "code": 102,
+          "profileId": 41440,
+          "label": "GP-combo-basic",
+          "name": "GP-combo-basic",
+          "deviceTypeOrder": 0
+        }
+      ],
+      "deviceVersions": [
+        1
+      ],
+      "deviceIdentifiers": [
+        102
+      ],
       "deviceTypeName": "GP-combo-basic",
       "deviceTypeCode": 102,
       "deviceTypeProfileId": 41440,
@@ -52,80 +76,120 @@
               "code": 0,
               "mfgCode": null,
               "source": "client",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
+            },
+            {
+              "name": "GpNotificationResponse",
+              "code": 0,
+              "mfgCode": null,
+              "source": "server",
+              "isIncoming": 1,
+              "isEnabled": 1
             },
             {
               "name": "GpPairingSearch",
               "code": 1,
               "mfgCode": null,
               "source": "client",
-              "incoming": 0,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
             },
             {
-              "name": "GpTunnelingStop",
-              "code": 3,
+              "name": "GpPairing",
+              "code": 1,
               "mfgCode": null,
-              "source": "client",
-              "incoming": 0,
-              "outgoing": 0
+              "source": "server",
+              "isIncoming": 1,
+              "isEnabled": 1
+            },
+            {
+              "name": "GpProxyCommissioningMode",
+              "code": 2,
+              "mfgCode": null,
+              "source": "server",
+              "isIncoming": 1,
+              "isEnabled": 1
             },
             {
               "name": "GpCommissioningNotification",
               "code": 4,
               "mfgCode": null,
               "source": "client",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
             },
             {
               "name": "GpSinkCommissioningMode",
               "code": 5,
               "mfgCode": null,
               "source": "client",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
+            },
+            {
+              "name": "GpResponse",
+              "code": 6,
+              "mfgCode": null,
+              "source": "server",
+              "isIncoming": 1,
+              "isEnabled": 1
             },
             {
               "name": "GpTranslationTableUpdate",
               "code": 7,
               "mfgCode": null,
               "source": "client",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
             },
             {
               "name": "GpTranslationTableRequest",
               "code": 8,
               "mfgCode": null,
               "source": "client",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
             },
             {
               "name": "GpPairingConfiguration",
               "code": 9,
               "mfgCode": null,
               "source": "client",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
             },
             {
               "name": "GpSinkTableRequest",
               "code": 10,
               "mfgCode": null,
               "source": "client",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
+            },
+            {
+              "name": "GpSinkTableResponse",
+              "code": 10,
+              "mfgCode": null,
+              "source": "server",
+              "isIncoming": 1,
+              "isEnabled": 1
             },
             {
               "name": "GpProxyTableResponse",
               "code": 11,
               "mfgCode": null,
               "source": "client",
-              "incoming": 0,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
+            },
+            {
+              "name": "GpProxyTableRequest",
+              "code": 11,
+              "mfgCode": null,
+              "source": "server",
+              "isIncoming": 1,
+              "isEnabled": 1
             }
           ],
           "attributes": [
@@ -236,60 +300,108 @@
           "enabled": 1,
           "commands": [
             {
+              "name": "GpNotification",
+              "code": 0,
+              "mfgCode": null,
+              "source": "client",
+              "isIncoming": 1,
+              "isEnabled": 1
+            },
+            {
               "name": "GpNotificationResponse",
               "code": 0,
               "mfgCode": null,
               "source": "server",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
             },
             {
               "name": "GpPairing",
               "code": 1,
               "mfgCode": null,
               "source": "server",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
             },
             {
               "name": "GpProxyCommissioningMode",
               "code": 2,
               "mfgCode": null,
               "source": "server",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
+            },
+            {
+              "name": "GpCommissioningNotification",
+              "code": 4,
+              "mfgCode": null,
+              "source": "client",
+              "isIncoming": 1,
+              "isEnabled": 1
+            },
+            {
+              "name": "GpSinkCommissioningMode",
+              "code": 5,
+              "mfgCode": null,
+              "source": "client",
+              "isIncoming": 1,
+              "isEnabled": 1
             },
             {
               "name": "GpResponse",
               "code": 6,
               "mfgCode": null,
               "source": "server",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
             },
             {
-              "name": "GpTranslationTableResponse",
+              "name": "GpTranslationTableUpdate",
+              "code": 7,
+              "mfgCode": null,
+              "source": "client",
+              "isIncoming": 1,
+              "isEnabled": 1
+            },
+            {
+              "name": "GpTranslationTableRequest",
               "code": 8,
               "mfgCode": null,
-              "source": "server",
-              "incoming": 0,
-              "outgoing": 0
+              "source": "client",
+              "isIncoming": 1,
+              "isEnabled": 1
+            },
+            {
+              "name": "GpPairingConfiguration",
+              "code": 9,
+              "mfgCode": null,
+              "source": "client",
+              "isIncoming": 1,
+              "isEnabled": 1
+            },
+            {
+              "name": "GpSinkTableRequest",
+              "code": 10,
+              "mfgCode": null,
+              "source": "client",
+              "isIncoming": 1,
+              "isEnabled": 1
             },
             {
               "name": "GpSinkTableResponse",
               "code": 10,
               "mfgCode": null,
               "source": "server",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
             },
             {
               "name": "GpProxyTableRequest",
               "code": 11,
               "mfgCode": null,
               "source": "server",
-              "incoming": 1,
-              "outgoing": 1
+              "isIncoming": 0,
+              "isEnabled": 1
             }
           ],
           "attributes": [
@@ -497,9 +609,7 @@
       "profileId": "0xA1E0",
       "endpointId": 242,
       "networkId": 0,
-      "endpointVersion": 1,
-      "deviceIdentifier": 102
+      "parentEndpointIdentifier": null
     }
-  ],
-  "log": []
+  ]
 }

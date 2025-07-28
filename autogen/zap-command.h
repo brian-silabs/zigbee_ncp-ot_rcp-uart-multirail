@@ -7732,7 +7732,7 @@ sl_zigbee_af_fill_external_buffer((ZCL_CLUSTER_SPECIFIC_COMMAND \
 
 
 
-/** @brief This command is generated when the Client command GetProfile is received.
+/** @brief This command is generated when the Client command GetProfile is received, where intervals is an array with each element being 24 bits in size, and the total length of the intervals array is specified in bytes.
 * Cluster: Simple Metering, The Metering Cluster provides a mechanism to retrieve usage information from Electric, Gas, Water, and potentially Thermal metering devices.
 * Command: GetProfileResponse
 * @param endTime uint32_t

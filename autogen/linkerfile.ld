@@ -98,7 +98,7 @@ SECTIONS
     __text_application_ram_end__ = .;
   } > RAM AT > FLASH
 
-  .rodata :
+  .rodata (READONLY):
   {
     __lma_ramfuncs_end__ = .;
     __rodata_start__ = .;
@@ -146,7 +146,7 @@ SECTIONS
   } > FLASH
   __exidx_end = .;
 
-  .copy.table :
+  .copy.table (READONLY):
   {
     . = ALIGN(4);
     __copy_table_start__ = .;
@@ -165,7 +165,7 @@ SECTIONS
     __copy_table_end__ = .;
   } > FLASH
 
-  .zero.table :
+  .zero.table (READONLY):
   {
     . = ALIGN(4);
     __zero_table_start__ = .;
@@ -225,7 +225,6 @@ heap_size = heap_limit - __HeapBase;
     __HeapBase = .;
     . += heap_size;
     __end__ = .;
-    end = __end__;
     _end = __end__;
     KEEP(*(.memory_manager_heap*))
     __HeapLimit = ORIGIN(RAM) + LENGTH(RAM);

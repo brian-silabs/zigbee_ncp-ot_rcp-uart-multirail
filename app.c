@@ -86,5 +86,20 @@ void sl_ot_ncp_init(void)
 {
   otAppNcpInit(sInstance);
 }
-
+#define OT_NWK_UP (otThreadGetDeviceRole(sInstance) != OT_DEVICE_ROLE_DISABLED)
+#else
+#define OT_NWK_UP false
 #endif //#if defined(OPENTHREAD_FTD) || defined(OPENTHREAD_RADIO)
+
+void sl_rail_mux_invalid_rx_channel_detected_cb(uint8_t new_rx_channel, uint8_t old_rx_channel)
+{
+  sl_zigbee_node_type_t type = SL_ZIGBEE_UNKNOWN_DEVICE;
+  sli_zigbee_stack_get_network_parameters(type, NULL);
+
+  if (type != SL_ZIGBEE_UNKNOWN_DEVICE
+      // || sli_zigbee_node_type != SL_ZIGBEE_UNKNOWN_DEVICE
+      || OT_NWK_UP) {
+    sl_zigbee_mux_invalid_rx_handler(new_rx_channel, old_rx_channel);
+    //EFM_ASSERT(false);
+  }
+}
